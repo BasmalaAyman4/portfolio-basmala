@@ -105,7 +105,8 @@
 }
 @media (min-width:0px) and (max-width:600px) {
     .shape__mask,
-    .personal__shape h2{
+    .personal__shape h2,
+    .shape__dot{
         display: none;
     }
   .link{
@@ -130,4 +131,5 @@ display: flex !important;
   .personal__sec{
     height: fit-content;
   }
+ 
 }
