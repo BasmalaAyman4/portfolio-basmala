@@ -51,7 +51,9 @@ const Services = () => {
     useEffect(() => {
         updateActiveBackground();
     }, [activeService]);
-
+    const handleTouchStart = (index) => {
+        setActiveService(index);
+    };
     return (
         <section className={styles.servicesSection} id="services">
             <div className={styles.container}>
@@ -69,6 +71,7 @@ const Services = () => {
                                 data-index={index}
                                 onMouseEnter={() => handleServiceHover(index)}
                                 onMouseLeave={handleServiceLeave}
+                                onTouchStart={() => handleTouchStart(index)}
                                 onClick={() => setActiveService(index)}
                             >
                                 <div className={styles.serviceContent}>
