@@ -58,7 +58,7 @@ const Services = () => {
         <section className={styles.servicesSection} id="services">
             <div className={styles.container}>
                 <div className={styles.sectionHeader}>
-                    <h2 className={styles.sectionTitle}>What I Can Do?</h2>
+                    <h2 className={styles.sectionTitle}>My Quality Services</h2>
                 </div>
 
                 <div className={styles.servicesContainer} data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="800">
