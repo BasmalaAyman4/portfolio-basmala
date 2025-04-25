@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sectionTitle {
+    font-size: 2.8rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #8750f7 0%, #2a1454 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.servicesSection {
+    padding: 7.5rem 0;
+    background-color: #F6F3FC;
+    font-family: "Urbanist", sans-serif;
+}
+
+.servicesWidget {
+    position: relative;
+}
+
+.serviceItem {
+    border-bottom: 1px solid #ede8f7;
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Urbanist", sans-serif;
+}
+
+.serviceContent {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.serviceHeader {
+    width: 40%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.serviceNumber {
+    color: #8750f7;
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-family: "Urbanist", sans-serif;
+}
+
+.serviceTitle {
+    font-size: 1.9rem;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color: #2a1454;
+    transition: all 0.3s ease;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+}
+
+.serviceDescription {
+    width: 60%;
+    padding: 30px 0;
+    padding-right: 15%;
+    color: #2a1454;
+    transition: all 0.3s ease;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.activeBackground {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(260deg, #2a1454 0%, #8750f7 100%);
+    transition: all 0.5s ease;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease, opacity 0.3s ease;
+}
+.activeBackground:not(.active) {
+    opacity: 0;
+}
+/* Active/Hover states */
+.serviceItem:hover,
+.active {
+    color: white;
+}
+
+.serviceItem:hover .serviceNumber,
+.active .serviceNumber,
+.serviceItem:hover .serviceTitle,
+.active .serviceTitle,
+.serviceItem:hover .serviceDescription,
+ .active .serviceDescription,
+.serviceItem:hover .serviceDescription p,
+.active .serviceDescription p {
+    color: white !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2.2rem;
+    }
+
+    .serviceContent {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .serviceHeader,
+    .serviceDescription {
+        width: 100%;
+        padding: 0;
+    }
+
+    .serviceHeader {
+        padding-right: 25px;
+    }
+
+    .serviceTitle {
+        font-size: 1.1rem;
+    }
+
+   
+
+    .serviceItem .active {
+        background: linear-gradient(260deg, #8750f7 0%, #2a1454 100%);
+        padding: 20px 15px;
+        color: white;
+    }
+
+    .serviceItem.active .serviceNumber,
+    .serviceItem.active .serviceTitle,
+    .serviceItem.active .serviceDescription {
+        color: white !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesSection {
+        padding: 5rem 0;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+}
