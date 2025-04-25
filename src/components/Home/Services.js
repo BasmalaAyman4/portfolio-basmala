@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from '../../styles/services.module.css';
 
 const Services = () => {
-    const [activeService, setActiveService] = useState(-1);
+    const [activeService, setActiveService] = useState(0);
     const activeBgRef = useRef(null);
 
     const services = [
@@ -33,7 +33,7 @@ const Services = () => {
     };
 
     const handleServiceLeave = () => {
-        setActiveService(-1);
+        setActiveService(0);
     };
 
     const updateActiveBackground = () => {

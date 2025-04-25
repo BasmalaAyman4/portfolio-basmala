@@ -15,7 +15,7 @@
     font-size: 2.8rem;
     font-family: "Urbanist", sans-serif;
     font-weight: 700;
-    background-image: linear-gradient(to right, #8750f7 0%, #2a1454 100%);
+    background-image: linear-gradient(to right, #5053f7 0%, #142a54 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -23,8 +23,8 @@
 }
 
 .servicesSection {
-    padding: 7.5rem 0;
-    background-color: #F6F3FC;
+    padding: 4rem 0;
+    background-color: #ffffff;
     font-family: "Urbanist", sans-serif;
 }
 
@@ -89,7 +89,7 @@
 .activeBackground {
     position: absolute;
     z-index: 1;
-    background: linear-gradient(260deg, #2a1454 0%, #8750f7 100%);
+    background: linear-gradient(260deg, #141a54 0%, #5085f7 100%);
     transition: all 0.5s ease;
     left: 0;
     right: 0;

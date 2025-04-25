@@ -1,0 +1,145 @@
+.skills__sec{
+ padding: 70px 0;
+    height: 70dvh;
+    position: relative;
+    background-color: #F3F7FB;
+}
+.skills__right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTitle {
+    font-size: 2.8rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #5053f7 0%, #142a54 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+}
+.sectionSubtitle{
+font-size: 1rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+background-color: #6e6d6d;
+width: 600px;
+text-align: center;
+margin: auto; 
+-webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+}
+
+.svg{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.card__title{
+    margin: 30px 0 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.skill__card p{
+    padding-bottom: 10px;
+}
+.perf{
+    top: 20px;
+    left: 20px;
+}
+.skill__card {
+    background-color: #fff;
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+/* تأثير الخلفية الزرقاء */
+.skill__card::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(260deg, #141a54 0%, #5085f7 100%);
+    z-index: 0;
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* تأثير الهوفر */
+.skill__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill__card:hover::before {
+    bottom: 0;
+}
+
+/* تحويل الشكل إلى أبيض عند الهوفر */
+.skill__card:hover .card__shape img {
+    filter: brightness(0) invert(1);
+}
+
+/* التأكد من أن المحتوى فوق الخلفية */
+.card__shape,
+.card__title,
+.skill__card p {
+    position: relative;
+    z-index: 1;
+}
+
+/* تغيير لون النص عند الهوفر */
+.skill__card:hover .card__title,
+.skill__card:hover p {
+    color: white !important;
+}
+
+/* تغيير لون الأيقونات عند الهوفر */
+.skill__card:hover .svg {
+    fill: white;
+}
+.skill__card:hover .svg path {
+    fill: white;
+}
+@media (min-width:0px) and (max-width:600px) {
+    .skills__right{
+        display: none;
+    }
+    .sectionSubtitle{
+        width: 100%;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+    .skills__sec{
+        height: 100%;
+    }
+}

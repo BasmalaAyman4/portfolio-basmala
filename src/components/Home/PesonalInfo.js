@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../styles/personalinfo.module.css'
 import shapeone from '../../assets/line-shape-1.png'
 import mask from '../../assets/mask-shape.png'
 import dot from '../../assets/dot-shape.png'
 
 const PesonalInfo = () => {
+    const handleDownload = () => {
+        // استبدلي هذا الرابط برابط ملفك الفعلي
+        const fileUrl = "https://drive.google.com/uc?export=download&id=1u44W_CYyhrJMM2eIcEz1zJ3V7xgpltAR";
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Basmala-Ayman-CV.pdf'; // اسم الملف عند التحميل
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+ 
     return (
         <>
             <section className={`${styles.personal__sec}`}>
                 <div className={`${styles.personal__shape}`}>
-                    <h2>Technology</h2>
+                    <h2       
+    >
+                        Software Engineer
+    </h2>
                     <img alt='' src={shapeone} className={`${styles.shape__one}`} />
                 </div>
                 <img alt='' src={dot} className={`${styles.shape__dot}`} />
@@ -17,6 +31,21 @@ const PesonalInfo = () => {
                 <div className={`${styles.personal__desc}`}>
                     <p>Hello! I’m Basmala.</p>
                     <h2>I am a ux & frontend engineer passionate about building great user experiences</h2>
+                    <button className={`${styles.btn} ${styles.type1}`} onClick={handleDownload}>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path
+                                fill="currentColor"
+                                d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
+                            ></path>
+                        </svg> <span className={`${styles.btntxt}`}>Download CV</span>
+                    </button>
+
                 </div>
                 <div className={`${styles.links}`}>
                 <a href='www.linkedin.com/in/basmala-ayman-2710101b8/' className={`${styles.link} ${styles.linkenin}`}>
