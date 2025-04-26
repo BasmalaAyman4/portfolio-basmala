@@ -219,4 +219,13 @@ font-size: 2.8rem;
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
+        .projects__title{
+            font-size: 1.8rem;
+        }
+        .card__para{
+            font-size: 12px;
+        }
+        .card{
+            height: 440px !important;
+        }
 }

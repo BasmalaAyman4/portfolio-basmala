@@ -131,6 +131,7 @@ margin: auto;
     }
     .sectionSubtitle{
         width: 100%;
+        
     }
     .cards{
         display: flex;
@@ -141,5 +142,8 @@ margin: auto;
     }
     .skills__sec{
         height: 100%;
+    }
+    .sectionTitle{
+        font-size: 1.8rem;
     }
 }

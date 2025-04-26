@@ -103,4 +103,7 @@
 .experience__card {
     width: 100%;
 }
+.experience__body h2{
+font-size: 1.8rem;
+}
 }
