@@ -76,5 +76,6 @@ header__item:hover {
     .header__list{
         column-gap: 15px;
         justify-content: center;
+        padding-left:8px ;
     }
 }
