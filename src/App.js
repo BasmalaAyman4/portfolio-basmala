@@ -1,4 +1,5 @@
 import './App.css';
+import Experience from './components/Home/Experience';
 import PesonalInfo from './components/Home/PesonalInfo';
 import Services from './components/Home/Services';
 import Skills from './components/Home/Skills';
@@ -13,6 +14,7 @@ function App() {
      <PesonalInfo/>
      <Services/>
      <Skills/>
+     <Experience/>
     </>
   );
 }
