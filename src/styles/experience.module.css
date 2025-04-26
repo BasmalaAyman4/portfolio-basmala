@@ -64,7 +64,7 @@
         transition: all 0.4s ease-in-out 0s;
 }
 .experience__card h5{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 800;
         text-transform: uppercase;
         margin-bottom: 8px;
@@ -98,4 +98,9 @@
             -ms-transform: translateX(0);
             transform: translateX(0);
     }
+}
+@media (min-width:0px) and (max-width:600px) {
+.experience__card {
+    width: 100%;
+}
 }

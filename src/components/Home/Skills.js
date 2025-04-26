@@ -6,7 +6,7 @@ import shape from '../../assets/skillcard.png'
 const Skills = () => {
     return (
         <>
-            <section className={`${styles.skills__sec}`}>
+            <section className={`${styles.skills__sec}`} id="skills">
                 <img alt='' src={right} className={`${styles.skills__right}`} />
 
                 <Container>

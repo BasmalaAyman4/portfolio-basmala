@@ -7,7 +7,7 @@ import edu from '../../assets/mortarboard.png'
 const Experience = () => {
   return (
     <>
-      <section className={`${styles.experience__sec}`}>
+      <section className={`${styles.experience__sec}`} id="resume">
         <Container>
           <Row>
             <Col>

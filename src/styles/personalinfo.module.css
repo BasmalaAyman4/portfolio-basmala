@@ -6,6 +6,7 @@
     width: 100%;
     height: 80dvh;
     position: relative;
+    margin-top: 70px;
 }
 .personal__sec::after {
     content: '';
