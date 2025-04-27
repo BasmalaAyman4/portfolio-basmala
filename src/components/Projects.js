@@ -4,8 +4,8 @@ import pm from '../assets/pm.png'
 import shein from '../assets/shein.png'
 import etruk from '../assets/etruk.png'
 import styles from '../styles/projects.module.css'
-import projright from '../assets/proj1.png'
-import projleft from '../assets/proj2.png'
+import cash from '../assets/cash.png'
+import dash from '../assets/dash.png'
 
 const Projects = () => {
     const projects = [
@@ -40,6 +40,22 @@ const Projects = () => {
             image: etruk,
             category: "Charities",
             url:"https://drive.google.com/file/d/15Galft6_yVIlKigYJl3d41i2g8G_jbYs/view?usp=drive_link"
+        },
+        {
+            id: 5,
+            title: "Trauxit Cash",
+            description: "providing businesses and individuals with reliable, fast, and secure methods for digital and physical payments.With a focus on advanced security measures, we ensure your transactions are safe",
+            image: cash,
+            category: "Payment",
+            url: "https://cash-kohl.vercel.app/"
+        },
+        {
+            id: 6,
+            title: "Trauxit Dashboard",
+            description: "Developed, and maintained a Dashboard by building reusable components, and a responsive layout can share your posts with other people and chat with them create shipment deatils and view who will deliver it",
+            image: dash,
+            category: "Dashboard",
+            url: "https://drive.google.com/file/d/12cThw0IeWOwk1d79465zPAvFMKdgRFnu/view"
         },
        
     ];
