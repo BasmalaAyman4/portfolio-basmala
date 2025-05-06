@@ -1,4 +1,4 @@
-.experience__sec{
+/* .experience__sec{
   padding: 70px 0;
 }
 .experience__body{
@@ -106,4 +106,234 @@
 .experience__body h2{
 font-size: 1.8rem;
 }
+} */
+
+
+.ThirdSec {
+    position: relative;
+    color: #fff !important;
+    margin: 170px ;
+    text-align: center;
+}
+
+.skills__title {
+    font-size: 2.8rem;
+        font-family: "Urbanist", sans-serif;
+        font-weight: 700;
+        background: -webkit-gradient(linear,
+                left top,
+                right top,
+                from(#8750f7),
+                to(#fff));
+        background: -o-linear-gradient(left,
+                #8750f7 0%,
+                #fff 100%);
+        background: linear-gradient(to right,
+                #8750f7 0%,
+                #fff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 1.5rem;}
+.sectionSubtitle {
+    font-size: 1rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    background-color: #fff;
+ 
+    text-align: center;
+    margin:auto ;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 8px;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    position: relative;
+}
+
+.col {
+
+    background-image: linear-gradient(#ffffff1a, #fff0);
+    border-radius: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 38px 30px 30px;
+    height: fit-content;
+    text-align: left !important;
+}
+
+.row h2 {
+    font-size: 17px;
+}
+
+.title__linee {
+    background-image: linear-gradient(to right, #5c27fe, #d0b5ff 100%, #dec7ff);
+    width: 60px;
+    height: 4px;
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+.lines__body {
+    background-color: #1f223e;
+    width: 1px;
+    height: 950px;
+    position: absolute;
+margin-top: 15px;
+    left: 50%;
+}
+
+.lines__one,
+.lines__two,
+.lines__three,
+.lines__four,
+.lines__five {
+    background-color: #1f223e;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    position: absolute;
+
+    right: -9px;
+    z-index: 100000;
+}
+
+.line__top,
+.line__bottom,
+.line__onee,
+.line__twoo,
+.line__three,
+.line__fourr,
+.line__fivee {
+    background-image: linear-gradient(281deg, #dec7ff, #5c27fe);
+    border-radius: 100%;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: -5px;
+    z-index: 1000;
+}
+
+.line__bottom {
+    bottom: -10px;
+}
+
+.lines__one {
+    top: 75px;
+}
+
+.line__onee,
+.line__twoo,
+.line__three,
+.line__fourr,
+.line__fivee {
+    right: 4px;
+}
+
+.lines__two {
+    top: 270px;
+}
+
+.lines__three {
+    top: 480px;
+}
+
+.lines__four {
+    bottom: 268px;
+}
+
+.lines__five {
+    bottom: 94px;
+}
+
+.skill__one {
+    margin-top: 45px;
+}
+
+.line__left {
+    position: absolute;
+    background-color: #1f223e;
+    width: 50px;
+    height: 1px;
+    left: 100%;
+}
+
+.skill__two {
+    margin-top: 240px;
+}
+
+.skill__three {
+    margin-top: -105px;
+}
+
+.skill__four {
+    margin-top: 78px;
+}
+.skill__five{
+    margin-top: -50px;
+}
+.line__right {
+    position: absolute;
+    background-color: #1f223e;
+    width: 50px;
+    height: 1px;
+    right: 100%;
+}
+
+.ul__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.row h4 {
+    color: #aaa8ac;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.row h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.row h2 {
+    color: #aca9a9;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.line__exp{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin: 15px 0;
+}
+.line__exp p{
+    border: 1px solid #8750f7;
+    padding: 5px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-size: 15px;
+    background-color: #8850f733;
 }

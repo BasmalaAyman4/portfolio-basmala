@@ -3,7 +3,16 @@ import logo from '../assets/logo.png'
 import styles from '../styles/header.module.css'
 const Header = () => {
   const [activeSection, setActiveSection] = useState('Home');
-
+  const [navBg, setNavBg] = useState(false);
+  const changeNavBg = () => {
+    window.scrollY >= 200 ? setNavBg(true) : setNavBg(false);
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBg);
+    return () => {
+      window.removeEventListener('scroll', changeNavBg);
+    }
+  }, [])
   const handleNavClick = (section) => {
     setActiveSection(section);
     const targetElement = document.getElementById(section.toLowerCase());
@@ -36,7 +45,7 @@ const Header = () => {
   }, []);
   return (
     <>
-      <header className={`${styles.header}`}>
+      <header className={`${styles.header} ${navBg ?styles.bg : ""}`}>
         <div>
           <img alt='' src={logo} className={`${styles.logo}`} />
         </div>

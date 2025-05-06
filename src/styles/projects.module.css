@@ -1,11 +1,7 @@
 .project__sec{
-background-color: #18185E;
 position: relative;
 padding: 50px 0;
-background-image: url('../assets/exp.jpg');
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+
 padding-bottom: 170px;
 }
 .projright{
@@ -24,10 +20,7 @@ font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-        background-image: linear-gradient(to right, #5053f7 0%, #142a54 100%);
--webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+color: #fff;
     margin-bottom: 60px;
     }
 .cards{
@@ -39,13 +32,13 @@ font-size: 2.8rem;
 .card {
     width: min(430px, 100%);
     border-radius: 18px !important;
-    color: #141417;
+    color: #fff;
     height: 500px !important;
     -webkit-border-radius: 18px !important;
     -moz-border-radius: 18px !important;
     -ms-border-radius: 18px !important;
     -o-border-radius: 18px !important;
-    background-color: #fff;
+    background-color: #16224D;
 }
 
 .card__hero {

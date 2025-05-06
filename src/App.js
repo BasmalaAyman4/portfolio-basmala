@@ -6,17 +6,24 @@ import Skills from './components/Home/Skills';
 import Projects from './components/Projects';
 import Header from './layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'aos/dist/aos.css'
 
 
 function App() {
   return (
     <>
-    <Header/>
-     <PesonalInfo/>
-     <Services/>
-     <Skills/>
-     <Experience/>
-     <Projects/>
+ {/*   
+     
+    
+     
+     
+     <Projects/> */}
+      <Header />
+      <PesonalInfo />
+      <Services />
+      <Skills />
+      <Experience />
+      <Projects />
     </>
   );
 }

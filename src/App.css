@@ -1,3 +1,17 @@
+
+ body {
+     margin: 0 !important;
+     padding: 0 !important;
+     font-family: Arial, sans-serif;
+     height: 100%;
+     background-color: #070a29 !important;
+     background-image: url('./assets/648a6bb39e2d83664cf29c45_Bg\ \(1\).png') !important;
+     background-position: 0 0;
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 100%;
+     width: 100% !important;
+ }
 p{
     margin: 0 !important;
 }

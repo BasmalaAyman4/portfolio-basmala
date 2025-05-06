@@ -26,9 +26,9 @@ const PesonalInfo = () => {
     </h2>
                     <img alt='' src={shapeone} className={`${styles.shape__one}`} />
                 </div>
-                <img alt='' src={dot} className={`${styles.shape__dot}`} />
-                <img alt='' src={mask} className={`${styles.shape__mask}`} />
-                <div className={`${styles.personal__desc}`}>
+                {/*              <img alt='' src={dot} className={`${styles.shape__dot}`} />
+               <img alt='' src={mask} className={`${styles.shape__mask}`} />
+ */}                <div className={`${styles.personal__desc}`}>
                     <p>Hello! I’m Basmala.</p>
                     <h2>I am a ux & frontend engineer passionate about building great user experiences</h2>
                     <button className={`${styles.btn} ${styles.type1}`} onClick={handleDownload}>
