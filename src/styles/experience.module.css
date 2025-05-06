@@ -120,20 +120,8 @@ font-size: 1.8rem;
     font-size: 2.8rem;
         font-family: "Urbanist", sans-serif;
         font-weight: 700;
-        background: -webkit-gradient(linear,
-                left top,
-                right top,
-                from(#8750f7),
-                to(#fff));
-        background: -o-linear-gradient(left,
-                #8750f7 0%,
-                #fff 100%);
-        background: linear-gradient(to right,
-                #8750f7 0%,
-                #fff 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+
+        color: #fff;
         margin-bottom: 1.5rem;}
 .sectionSubtitle {
     font-size: 1rem;
@@ -336,4 +324,212 @@ margin-top: 15px;
     -o-border-radius: 20px;
     font-size: 15px;
     background-color: #8850f733;
+}
+
+
+
+@media (min-width:0px) and (max-width:600px) {
+    .arrow {
+        width: 100%;
+    }
+
+
+    .one p,
+    .two p,
+    .three p,
+    .four p {
+        top: 5px;
+
+    }
+
+    .one {
+        top: 35%;
+        left: 0%;
+    }
+
+    .two {
+        left: 25%;
+        top: 40%
+    }
+
+    .three {
+        top: 40%;
+    }
+
+    .four {
+        top: 40%;
+        left: 87%;
+    }
+
+    .parts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .part {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 0px;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 10px !important;
+    }
+
+    .lines__body {
+        display: none;
+    }
+
+    .row,
+    .cards__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill__two {
+        margin-top: 10px;
+    }
+
+    .skill__three {
+        margin-top: 12px;
+    }
+
+    .skill__four {
+        margin-top: 10px;
+    }
+
+    .speciality__title {
+        font-size: 32px;
+    }
+
+    .filter__body {
+        column-gap: 5px;
+    }
+
+    .card {
+        width: 22rem !important;
+        height: 30rem !important;
+    }
+
+    .card p {
+        width: 100%;
+    }
+
+    .playlist__body {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 100px;
+        width: 100%;
+
+    }
+
+    .playlists {
+
+        margin: auto 30px;
+    }
+
+    .playlists__content {
+
+        gap: 0;
+    }
+
+    .playlists__content img {
+        width: 100%;
+    }
+
+    .cards__body {
+        margin: 20px 0;
+        row-gap: 20px;
+    }
+
+    .line__right,
+    .line__left {
+        display: none;
+    }
+}
+
+
+@media (min-width:0px) and (max-width:600px) {
+    .first__sec {
+        padding: 0px;
+    }
+
+    .first__sec__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title__body {
+        margin-top: 30px;
+        width: 100%;
+        font-size: 40px;
+        padding: 0 10px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .title__color {
+        font-size: 30px;
+    }
+
+    .title__line {
+        right: 0;
+        left: 0;
+        width: 60%;
+    }
+
+    .para__line {
+        margin-top: 100px;
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .user {
+        width: 230px;
+        left: 80px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        top: 30px;
+    }
+
+    .gmail,
+    .call,
+    .linkedin,
+    .git,
+    .benhance,
+    .youtube {
+        width: 25px;
+    }
+
+    .git {
+        right: 30px;
+    }
+    .ThirdSec{
+        margin: 10px;
+    }
+    .line__exp{
+        display: grid;
+        grid-template-columns: repeat(5,auto);
+       gap: 2px;
+    }
+    .line__exp p{
+        padding: 5px 5px !important;
+        font-size: 10px;
+    }
+    .skill__five{
+        margin: 0;
+    }
+    .skills__title{
+        font-size: 2rem;
+    }
+    .sectionSubtitle{
+        font-size: 1rem;
+    }
 }
