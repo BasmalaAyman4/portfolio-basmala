@@ -60,7 +60,7 @@ color: #fff;
         
 }
 .link{
-    position: absolute;
+ 
     fill: #fff;
     border: 1px solid #fff;
     width: 50px;
@@ -74,22 +74,18 @@ color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
+        padding-bottom: 0;
 }
-.linkenin{
-    right: 80px;
-        top: 60px;
+.links,.social__btn{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 20px;
+ 
 }
-.gmail{
-    right: 280px;
-        top: 180px;
-}
-.github{
-    right: 320px;
-        top: 370px;
-}
-.whatsapp{
-    right: 300px;
-        top: 570px;
+.links{
+    margin-top: 0px;
 }
 .link:hover{
     background-color: #fff;
@@ -149,7 +145,7 @@ display: flex !important;
     border-radius: 30px;
     color: #b8afaf;
     transition: all 0.5s ease-in-out;
-    margin-top: 20px;
+  
 }
 
 .btntxt {
@@ -158,19 +154,7 @@ display: flex !important;
     letter-spacing: 4px;
 }
 
-.btn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-    background-color: #bdb7b7;
-    border-radius: 30px;
-    visibility: hidden;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-}
+
 
 .btn:hover {
     box-shadow: 1px 1px 200px #b9b4b4;

@@ -54,8 +54,7 @@ const Header = () => {
           {['Home', 'Services', 'Skills', 'Resume', 'Projects'].map((item) => (
             <li
               key={item}
-              className={`${styles.header__item} ${activeSection === item ? styles.active : ''
-                }`}
+              className={`${styles.header__item}`}
               onClick={() => handleNavClick(item)}
             >
               {item}

@@ -36,7 +36,7 @@ const Projects = () => {
         {
             id: 4,
             title: "Etruk Athar",
-            description: "A platform dedicated to making a positive impact by connecting individuals with charitable causes, poverty alleviation initiatives, and volunteering opportunities. We aim to empower communities through...",
+            description: "A platform dedicated to making a positive impact by connecting individuals with charitable causes, poverty alleviation initiatives, and volunteering opportunities. We aim to empower communities...",
             image: etruk,
             category: "Charities",
             url:"https://drive.google.com/file/d/15Galft6_yVIlKigYJl3d41i2g8G_jbYs/view?usp=drive_link"
@@ -52,7 +52,7 @@ const Projects = () => {
         {
             id: 6,
             title: "Trauxit Dashboard",
-            description: "Developed, and maintained a Dashboard by building reusable components, and a responsive layout can share your posts with other people and chat with them create shipment deatils and view who will deliver it",
+            description: "Developed, and maintained a Dashboard by building reusable components, and a responsive layout can share your posts with other people and chat with them create shipment deatils and view who will...",
             image: dash,
             category: "Dashboard",
             url: "https://drive.google.com/file/d/12cThw0IeWOwk1d79465zPAvFMKdgRFnu/view"
