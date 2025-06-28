@@ -11,6 +11,8 @@ const PanelsContainer = ({ panelsRef, scrollToPanel, scrollToSection }) => {
           <Services scrollToPanel={scrollToPanel} />
           <Skills scrollToPanel={scrollToPanel} />
       <Experience scrollToPanel={scrollToPanel} />
+
+      
    {/*        <Panel3 scrollToPanel={scrollToPanel} />
           <Panel4 scrollToPanel={scrollToPanel} />
           <Panel5 scrollToPanel={scrollToPanel} scrollToSection={scrollToSection} /> */}
