@@ -61,7 +61,7 @@ const Services = () => {
                     <h2 className={styles.sectionTitle}>My Quality Services</h2>
                 </div>
 
-                <div className={styles.servicesContainer} data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="800">
+                <div className={styles.servicesContainer}>
                     <div className={styles.servicesWidget}>
                         <div ref={activeBgRef} className={styles.activeBackground} style={{ opacity: activeService !== -1 ? 1 : 0 }}></div>
                         {services.map((service, index) => (

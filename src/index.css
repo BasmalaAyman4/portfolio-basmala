@@ -13,3 +13,6 @@ code {
 p{
   margin: 0;
 }
+.animated-cursor {
+  z-index: 9999 !important;
+}

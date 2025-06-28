@@ -2,15 +2,15 @@
  body {
      margin: 0 !important;
      padding: 0 !important;
-     font-family: Arial, sans-serif;
-     height: 100%;
-     background-color: #070a29 !important;
-     background-image: url('./assets/648a6bb39e2d83664cf29c45_Bg\ \(1\).png') !important;
-     background-position: 0 0;
+     font-family: "Amiamie",sans-serif !important;
+     height: 100% !important;
+     background-color: #E5E5E0 !important;
+/*      background-image: url('./assets/648a6bb39e2d83664cf29c45_Bg\ \(1\).png') !important; 
+ */     background-position: 0 0;
      background-size: cover;
      background-repeat: no-repeat;
-     height: 100%;
      width: 100% !important;
+   
  }
 p{
     margin: 0 !important;
@@ -72,3 +72,732 @@ p{
     transition: transform 0.3s ease-in-out 0.1s;
     transform: translate(0);
 }
+
+body,
+* {
+    cursor: none !important;
+}
+.mo{
+    z-index: 9999 !important;
+    pointer-events: none; 
+background-color: #0a416e !important;
+}
+.mo div{
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    background-color: #ddd !important;
+}
+.mo div:first-child{
+    background-color: #333 !important;
+}
+
+
+
+
+
+
+
+.site {
+  position: relative;
+  height: 100%;
+}
+
+.feather {
+  position: absolute;
+  /* Add your feather styles here */
+}
+
+.siteContent {
+  position: relative;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .site {
+        position: relative;
+    }
+
+    .feather {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: 10000;
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .anchor-nav {
+        display: flex;
+        gap: 0;
+    }
+
+    .anchor-btn {
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .anchor-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .full-screen {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .intro-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        flex-direction: column;
+    }
+
+    .intro-section h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .clouds {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="20" cy="10" r="8" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="10" r="6" fill="rgba(255,255,255,0.05)"/></svg>') repeat-x;
+        animation: float 20s infinite linear;
+    }
+
+    .clouds-layer-1 {
+        animation-duration: 25s;
+    }
+
+    .clouds-layer-2 {
+        animation-duration: 35s;
+        opacity: 0.5;
+    }
+
+    .panels-scroll-container {
+        position: relative;
+    }
+
+    .panels-sticky-wrapper {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 10000 !important;
+    }
+
+    .panels-container {
+        display: flex;
+        height: 100vh;
+        width: 500%;
+        transition: transform 0.1s ease-out;
+    }
+
+    .panel {
+        width: 20%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+    }
+
+    /* Panel 1 - Red gradient with modern layout */
+    .panel-1 {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    }
+
+    .panel-1-content {
+        display: flex;
+        width: 90%;
+        max-width: 1200px;
+        height: 80%;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .panel-1-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-image-1 {
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+    }
+
+    .custom-image-1::before {
+        content: '🎨';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+    }
+
+    .panel-1-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .panel-1-title {
+        font-size: 4rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .panel-1-description {
+        font-size: 1.3rem;
+        line-height: 1.8;
+        opacity: 0.9;
+    }
+
+    .panel-1-next-btn {
+        padding: 1rem 2rem;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        color: white;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+    }
+
+    .panel-1-next-btn:hover {
+        background: white;
+        color: #ff6b6b;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Panel 2 - Orange with feature grid */
+    .panel-2 {
+        background: linear-gradient(135deg, #ffa726 0%, #ff9800 100%);
+    }
+
+    .panel-2-content {
+        width: 90%;
+        max-width: 1200px;
+        text-align: center;
+    }
+
+    .panel-2-title {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    .panel-2-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .panel-2-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-btn-2 {
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .nav-btn-2:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Panel 3 - Purple with split design */
+    .panel-3 {
+        background: linear-gradient(135deg, #ab47bc 0%, #9c27b0 100%);
+    }
+
+    .panel-3-content {
+        width: 90%;
+        max-width: 1200px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .panel-3-split {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        flex: 1;
+    }
+
+    .panel-3-text {
+        flex: 1;
+    }
+
+    .panel-3-badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .panel-3-heading {
+        font-size: 3rem;
+        margin: 1.5rem 0;
+        font-weight: 700;
+    }
+
+    .panel-3-paragraph {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .panel-3-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .panel-3-list li {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+    .panel-3-visual {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .panel-3-circle {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+        border-radius: 50%;
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        animation: pulse 3s infinite;
+    }
+
+    .panel-3-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .panel-3-btn {
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .panel-3-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Panel 4 - Green with form */
+    .panel-4 {
+        background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+    }
+
+    .panel-4-layout {
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .panel-4-title {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .panel-4-subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+    }
+
+    .panel-4-form {
+        margin-bottom: 3rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 1rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form-submit {
+        padding: 1rem 3rem;
+        background: white;
+        color: #4caf50;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .form-submit:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-4-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .panel-4-nav-btn {
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .panel-4-nav-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Panel 5 - Gray with stats */
+    .panel-5 {
+        background: linear-gradient(135deg, #78909c 0%, #607d8b 100%);
+    }
+
+    .panel-5-wrapper {
+        width: 90%;
+        max-width: 1000px;
+        text-align: center;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .panel-5-title {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    .panel-5-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(45deg, #fff, #e0e0e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stat-label {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+
+    .panel-5-cta {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        padding: 1.2rem 2.5rem;
+        background: linear-gradient(45deg, #ff6b6b, #ffa726);
+        border: none;
+        color: white;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .secondary-button {
+        padding: 1.2rem 2.5rem;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .secondary-button:hover {
+        background: white;
+        color: #607d8b;
+    }
+
+    .panel-5-nav {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .panel-5-back {
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .panel-5-back:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .map-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        flex-direction: column;
+    }
+
+    .map-section h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .map-section p {
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        from {
+            transform: translateX(-100px);
+        }
+
+        to {
+            transform: translateX(100vw);
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .panel-1-content,
+        .panel-3-split {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .panel-2-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .panel-1-title,
+        .panel-5-title {
+            font-size: 2.5rem;
+        }
+
+        .intro-section h1 {
+            font-size: 2.5rem;
+        }
+
+        .anchor-btn {
+            padding: 0.8rem 1rem;
+            font-size: 12px;
+        }
+
+        .panel-5-stats {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .panel-5-cta {
+            flex-direction: column;
+        }
+    }

@@ -81,3 +81,14 @@ header__item:hover {
         padding-left:8px ;
     }
 }
+
+
+.siteHeader {
+    position: fixed;
+    display: flex;
+    z-index: 9999;
+}
+
+.anchorNav a {
+    padding: 1rem 2rem;
+    color: white; }

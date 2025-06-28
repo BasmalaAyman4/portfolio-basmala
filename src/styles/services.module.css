@@ -4,6 +4,7 @@
     margin: auto;
     max-width: 1200px;
     padding: 0 20px;
+    
 }
 
 .sectionHeader {
@@ -23,6 +24,14 @@
 .servicesSection {
     padding: 6rem 0;
     font-family: "Urbanist", sans-serif;
+    width: 21%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        background-color: #333;
 }
 
 .servicesWidget {
@@ -30,7 +39,7 @@
 }
 
 .serviceItem {
-    border-bottom: 1px solid #2a1454;
+    border-bottom: 1px solid  #d0d4d6;
     padding: 0 30px;
     position: relative;
     z-index: 2;
@@ -86,9 +95,11 @@
 .activeBackground {
     position: absolute;
     z-index: 1;
-    background: linear-gradient(260deg,
+    /* background: linear-gradient(260deg,
                 #8750f7 0%,
-                #2a1454 100%);
+                #2a1454 100%); */
+                background: #d0d4d6;
+                    background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);
     transition: all 0.5s ease;
     left: 0;
     right: 0;
@@ -146,8 +157,8 @@
    
 
     .serviceItem .active {
-        background: linear-gradient(260deg, #8750f7 0%, #2a1454 100%);
-        padding: 20px 15px;
+        background: #d0d4d6;
+            background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);        padding: 20px 15px;
         color: white;
     }
 
@@ -159,8 +170,8 @@
           .serviceItem:active,
           .serviceItem:focus,
           .serviceItem.active {
-              background: linear-gradient(260deg, #8750f7 0%, #2a1454 100%) !important;
-              color: white !important;
+            background: #d0d4d6;
+                background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);              color: white !important;
           }
     
           .activeBackground {

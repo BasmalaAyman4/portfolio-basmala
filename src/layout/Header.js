@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
 import styles from '../styles/header.module.css'
-const Header = () => {
-  const [activeSection, setActiveSection] = useState('Home');
+const Header = ({ scrollToSection, scrollToPanel }) => {
+/*   const [activeSection, setActiveSection] = useState('Home');
   const [navBg, setNavBg] = useState(false);
   const changeNavBg = () => {
     window.scrollY >= 200 ? setNavBg(true) : setNavBg(false);
@@ -42,10 +42,10 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, []); */
   return (
     <>
-      <header className={`${styles.header} ${navBg ?styles.bg : ""}`}>
+    {/*   <header className={`${styles.header} ${navBg ?styles.bg : ""}`}>
         <div>
           <img alt='' src={logo} className={`${styles.logo}`} />
         </div>
@@ -62,6 +62,15 @@ const Header = () => {
           ))}
         </ul>
       
+      </header> */}
+      <header className="site-header">
+        <nav className="anchor-nav">
+          <button onClick={() => scrollToSection('intro')} className="anchor-btn">Home</button>
+          <button onClick={() => scrollToPanel(0)} className="anchor-btn">Panel 1</button>
+          <button onClick={() => scrollToPanel(2)} className="anchor-btn">Panel 3</button>
+          <button onClick={() => scrollToPanel(4)} className="anchor-btn">Panel 5</button>
+          <button onClick={() => scrollToSection('map')} className="anchor-btn">Map</button>
+        </nav>
       </header>
     </>
   )
