@@ -80,7 +80,7 @@ const Experience = () => {
   return (
 
     <>
-      <section className={`${styles.ThirdSec}`} id="resume">
+      <section className={`${styles.ThirdSec}`} id="experince">
           <h2 className={`${styles.skills__title}`}>Professional Experience </h2>
           <p className={styles.sectionSubtitle}>
         My professional journey in front-end development

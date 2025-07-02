@@ -123,8 +123,8 @@ function App() {
                   />
                 </div>
               </div>
-<Experience/>
-              <Projects/>
+            <Experience scrollToSection={scrollToSection} />
+            <Projects scrollToSection={scrollToSection} />
        </div>
         }
       <div className='mo'>
