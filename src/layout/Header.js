@@ -67,8 +67,7 @@ const Header = ({ scrollToSection, scrollToPanel }) => {
         <nav className="anchor-nav">
           <button onClick={() => scrollToSection('intro')} className="anchor-btn">Home</button>
           <button onClick={() => scrollToPanel(0)} className="anchor-btn">Panel 1</button>
-          <button onClick={() => scrollToPanel(2)} className="anchor-btn">Panel 3</button>
-          <button onClick={() => scrollToPanel(4)} className="anchor-btn">Panel 5</button>
+          <button onClick={() => scrollToPanel(1)} className="anchor-btn">Panel 5</button>
           <button onClick={() => scrollToSection('map')} className="anchor-btn">Map</button>
         </nav>
       </header>

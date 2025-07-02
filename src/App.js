@@ -9,10 +9,11 @@ import { useEffect, useRef, useState } from 'react';
 import AnimatedCursor from "react-animated-cursor"
 import { gsap } from 'gsap';
 import Loader from './Loader';
-import PanelsSection from './components/Home/PanelsSection';
 import PanelsContainer from './components/Home/PanelsContainer';
-
+import Experience from './components/Home/Experience';
+import Projects from './components/Projects'
 function App() {
+
   const [loading, setLoading] = useState(true);
   const containeref = useRef(null);
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
   }, [loading]);
 
   const containerRef = useRef(null);
-   const panelsRef = useRef(null);
+  const panelsRef = useRef(null);
   const [isInPanelsSection, setIsInPanelsSection] = useState(false);
   const [panelProgress, setPanelProgress] = useState(0);
   const [currentPanel, setCurrentPanel] = useState(0);
@@ -53,8 +54,8 @@ function App() {
         const clampedProgress = Math.max(0, Math.min(1, progress));
         setPanelProgress(clampedProgress);
 
-        // Calculate current panel
-        const totalPanels = 5;
+        // Calculate current panel - CHANGED: Now for 2 panels
+        const totalPanels = 2;
         const currentPanelIndex = Math.floor(clampedProgress * totalPanels);
         setCurrentPanel(Math.min(currentPanelIndex, totalPanels - 1));
 
@@ -86,7 +87,7 @@ function App() {
     const containerTop = containerRef.current.offsetTop;
     const containerHeight = containerRef.current.offsetHeight;
     const windowHeight = window.innerHeight;
-    const totalPanels = 5;
+    const totalPanels = 2; // CHANGED: Now 2 panels
 
     // Calculate progress to center on the specific panel
     const progress = panelIndex / (totalPanels - 1); // Use totalPanels - 1 for proper distribution
@@ -97,7 +98,6 @@ function App() {
       behavior: 'smooth'
     });
   };
-
   return (
     <>
       {loading && <Loader onComplete={() => setLoading(false)} />}
@@ -113,7 +113,7 @@ function App() {
               <div
                 ref={containerRef}
                 className="panels-scroll-container"
-                style={{ height: '500vh' , zIndex:'100000' }} // 5x viewport height for 5 panels
+                style={{ height: '150vh' }} // 5x viewport height for 5 panels
               >
                 <div className="panels-sticky-wrapper">
                   <PanelsContainer
@@ -123,11 +123,8 @@ function App() {
                   />
                 </div>
               </div>
-
-              <div id="map" className="full-screen map-section">
-                <h2>Map Section</h2>
-                <p>This section comes after the horizontal panels</p>
-              </div>
+<Experience/>
+              <Projects/>
        </div>
         }
       <div className='mo'>

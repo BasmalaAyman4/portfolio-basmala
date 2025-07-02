@@ -20,7 +20,7 @@ font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-color: #fff;
+color: #333;
     margin-bottom: 60px;
     }
 .cards{
@@ -38,7 +38,8 @@ color: #fff;
     -moz-border-radius: 18px !important;
     -ms-border-radius: 18px !important;
     -o-border-radius: 18px !important;
-    background-color: #16224D;
+    background: #888c8c;
+        background: linear-gradient(90deg, rgba(136, 140, 140, 1) 0%, rgba(105, 105, 105, 1) 50%, rgba(43, 43, 43, 1) 100%);
 }
 
 .card__hero {
@@ -76,7 +77,7 @@ color: #fff;
    padding: 10px 20px;
 }
 .card__category{
-        background: linear-gradient(260deg, #141a54 0%, #5085f7 100%);
+        background: linear-gradient(260deg, #2d2d2e 0%, #c1c1c4 100%);
         color: #fff;
         width: fit-content;
         padding: 5px 15px;
@@ -121,8 +122,8 @@ color: #fff;
     text-align: center;
     padding: 0.5rem 1.25rem;
     border-radius: 1rem;
-    background-color: #141417;
-    color: #fff;
+    background: linear-gradient(260deg, #2d2d2e 0%, #c1c1c4 100%);
+        color: #fff;
     font-size: 1rem;
 }
 
