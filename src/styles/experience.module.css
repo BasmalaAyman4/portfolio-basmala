@@ -4,6 +4,11 @@
     padding: 170px ;
     text-align: center;
     background-color: #333;
+   
+            width: 100%;
+           
+          
+            overflow: hidden !important;
 }
 
 .skills__title {
@@ -346,7 +351,9 @@ margin-top: 15px;
     .first__sec {
         padding: 0px;
     }
-
+.ThirdSec{
+    width: 100% !important;
+}
     .first__sec__row {
         display: flex;
         flex-direction: column;
@@ -407,12 +414,14 @@ margin-top: 15px;
     }
     .line__exp{
         display: grid;
-        grid-template-columns: repeat(5,auto);
+        grid-template-columns: repeat(3,auto);
        gap: 2px;
+
     }
     .line__exp p{
         padding: 5px 5px !important;
         font-size: 10px;
+        text-align: center;
     }
     .skill__five{
         margin: 0;
@@ -423,7 +432,12 @@ margin-top: 15px;
     .sectionSubtitle{
         font-size: 1rem;
     }
-   
+        .row h3{
+            font-size: 15px;
+        }
+        .row p{
+            font-size: 14px;
+        }
 }
 
 

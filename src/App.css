@@ -10,6 +10,7 @@
      background-repeat: no-repeat;
      width: 100% !important;
    
+   
  }
 p{
     margin: 0 !important;
@@ -109,6 +110,7 @@ body,
 
 .panels-scroll-container {
     position: relative;
+    height: 150vh;
 }
 
 .panels-sticky-wrapper {
@@ -144,5 +146,10 @@ body,
         height: auto;
         /* Allow natural height */
     }
-    .visabile{display: none;}
+  
+    .panels-scroll-container{
+      height: fit-content;  
+    }
+        .visabile {
+            display: none;   }
 }

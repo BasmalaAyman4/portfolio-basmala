@@ -13,8 +13,10 @@ const PanelsContainer = ({ panelsRef, scrollToPanel, scrollToSection }) => {
 
       
    </div>
+   {/*    <Experience scrollToSection={scrollToSection} />
+      <Projects scrollToSection={scrollToSection} /> */}
       <Experience scrollToSection={scrollToSection} />
-      <Projects scrollToSection={scrollToSection} />
+      <Projects scrollToSection={scrollToSection} /> 
     </>
   )
 }

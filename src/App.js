@@ -113,7 +113,7 @@ function App() {
               <div
                 ref={containerRef}
                 className="panels-scroll-container"
-                style={{ height: '150vh' }} // 5x viewport height for 5 panels
+             
               >
                 <div className="panels-sticky-wrapper">
                   <PanelsContainer
@@ -124,8 +124,8 @@ function App() {
                 </div>
               </div>
               <div className='visabile'>
-             <Experience scrollToSection={scrollToSection} />
-            <Projects scrollToSection={scrollToSection} /> 
+              <Experience scrollToSection={scrollToSection} />
+              <Projects scrollToSection={scrollToSection} /> 
             </div> 
        </div>
         }
