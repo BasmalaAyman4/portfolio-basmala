@@ -2,7 +2,7 @@
 position: relative;
 padding: 50px 0;
 padding-bottom: 170px;
-overflow: hidden !important;
+overflow: hidden ;
 }
 .projright{
     position: absolute;

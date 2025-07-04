@@ -140,16 +140,42 @@ body,
 
     .panels-container {
         width: 100%;
-        /* Change from 205% to 100% on mobile */
         flex-direction: column;
-        /* Stack panels vertically */
         height: auto;
-        /* Allow natural height */
     }
   
     .panels-scroll-container{
       height: fit-content;  
-    }
+    } 
+
+
+        .panels-sticky-wrapper {
+            position: relative;
+            /* Remove sticky behavior */
+            height: auto;
+            overflow: visible;
+        }
+    
+        .panels-container {
+            display: flex;
+            flex-direction: column;
+            /* Stack panels */
+            width: 100%;
+            height: auto;
+            transform: none !important;
+            /* Cancel horizontal scroll transforms */
+        }
+    
+        .panels-scroll-container {
+            height: auto;
+            /* Don't force 150vh on mobile */
+        }
         .visabile {
-            display: none;   }
+            display: none;  
+        
+        }
+        body,
+        *{
+            overflow-x: hidden !important;
+        }
 }
