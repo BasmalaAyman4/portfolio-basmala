@@ -6,13 +6,13 @@ const Header = ({ scrollToSection, scrollToPanel }) => {
   return (
     <>
 
-      <header className="site-header">
-        <nav className="anchor-nav">
-          <button onClick={() => scrollToSection('intro')} className="anchor-btn">Home</button>
-          <button onClick={() => scrollToPanel(0)} className="anchor-btn">Services</button>
-          <button onClick={() => scrollToPanel(1)} className="anchor-btn">Skills</button>
-          <button onClick={() => scrollToSection('experince')} className="anchor-btn">Experience</button>
-          <button onClick={() => scrollToSection('projects')} className="anchor-btn">Projects</button>
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <button onClick={() => scrollToSection('intro')} className={styles.btn}>Home</button>
+          <button onClick={() => scrollToPanel(0)} className={styles.btn}>Services</button>
+          <button onClick={() => scrollToPanel(1)} className={styles.btn}>Skills</button>
+          <button onClick={() => scrollToSection('experince')} className={styles.btn}>Experience</button>
+          <button onClick={() => scrollToSection('projects')} className={styles.btn}>Projects</button>
 
         </nav>
       </header>

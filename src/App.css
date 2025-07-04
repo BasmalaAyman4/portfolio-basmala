@@ -179,37 +179,6 @@ background-color: #0a416e !important;
         z-index: 10000;
     }
 
-    .site-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 9999;
-        background: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-    }
-
-    .anchor-nav {
-        display: flex;
-        gap: 0;
-    }
-
-    .anchor-btn {
-        padding: 1rem 2rem;
-        background: none;
-        border: none;
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .anchor-btn:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateY(-2px);
-    }
 
     .full-screen {
         width: 100%;

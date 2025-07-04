@@ -14,7 +14,7 @@ const PesonalInfo = () => {
 
     return (
         <>
-            <section className={`${styles.personal__sec}`} id="home">
+            <section className={`${styles.personal__sec}`} id="intro">
 
 
                 <div className={styles.personal__body}>

@@ -1,94 +1,32 @@
-.header{
-    height: 70px;
-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    padding: 0 150px;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-        top: 0;
-        z-index: 1000 !important;
-        width: 100%;
-        overflow: hidden;
-}
-.bg{
-        background-color: #101137;
-}
-.logo{
-    width: 60px;
-}
-.header span{
-    font-size: 20px;
-    font-weight: 800;
-}
-.header__list{
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-    margin-bottom: 0;
-}
-.header__item{
-    list-style: none;
-    font-size: 17px;
-    font-weight: 600;
-    font-family: "Urbanist", sans-serif;
-    cursor: pointer;
-    transition: color 0.3s ease;
-        position: relative;
-        color: #fff;
-}
-header__item:hover {
-    color: #fff;
-}
-
-.header__item.active {
-    color: #fff;
-    /* اللون الأزرق المطلوب */
-    transform: scale(0.95);
-}
-
-.header__item.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
+.header {
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: #fff;
-    animation: underline 0.3s ease;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-@keyframes underline {
-    from {
-        transform: scaleX(0);
-    }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-@media (min-width:0px) and (max-width:600px) {
-    .header{
-        padding: 5px;
-    }
-    .header div{
-        display: none;
-    }
-    .header__list{
-        column-gap: 15px;
-        justify-content: center;
-        padding-left:8px ;
-    }
-}
-
-
-.siteHeader {
-    position: fixed;
+.nav {
     display: flex;
-    z-index: 9999;
+    gap: 0;
 }
 
-.anchorNav a {
+.btn {
     padding: 1rem 2rem;
-    color: white; }
+    background: none;
+    border: none;
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-family: "Amiamie", sans-serif !important;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}

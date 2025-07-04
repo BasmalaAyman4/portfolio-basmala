@@ -108,7 +108,7 @@ function App() {
             <div className="feather"></div>
             <Header scrollToSection={scrollToSection} scrollToPanel={scrollToPanel} />
         
-              <PesonalInfo />
+            <PesonalInfo scrollToSection={scrollToSection} />
 
               <div
                 ref={containerRef}
