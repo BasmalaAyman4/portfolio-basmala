@@ -39,12 +39,20 @@
         /* Optimize for animations */
     }
     
-    @media (max-width: 767px) {
+    @media (min-width: 0px) and (max-width:600px){
         .loaderWrap svg {
             width: 200vw;
             margin-left: -50vw;
         }
     
         .loaderWrapHeading h1 {
-            font-size: 60px;
-        }     }
+            font-size: 27px;
+        }     
+    
+    }
+
+    @media (min-width:600px) and (max-width:900px) {
+        .loaderWrapHeading h1 {
+                font-size: 40px;
+            }
+    }

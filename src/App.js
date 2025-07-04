@@ -123,8 +123,10 @@ function App() {
                   />
                 </div>
               </div>
-            <Experience scrollToSection={scrollToSection} />
-            <Projects scrollToSection={scrollToSection} />
+              <div className='visabile'>
+             <Experience scrollToSection={scrollToSection} />
+            <Projects scrollToSection={scrollToSection} /> 
+            </div> 
        </div>
         }
       <div className='mo'>

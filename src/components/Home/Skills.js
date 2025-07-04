@@ -21,7 +21,7 @@ const Skills = () => {
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: cardRef.current,
-                    start: 'center center', // When top of card reaches 80% viewport height
+                    start: 'top center', 
                 },
             }
         );
@@ -29,9 +29,7 @@ const Skills = () => {
     return (
         <>
             <section className={`${styles.skills__sec}`} id="skills">
-{/*                 <img alt='' src={right} className={`${styles.skills__right}`} />
- */}
-                <Container>
+                <div className={styles.container}>
                     <div className={styles.sectionHeader}>
                         <h2 className={styles.sectionTitle}>My Skills</h2>
                         <p className={styles.sectionSubtitle}>
@@ -91,7 +89,7 @@ const Skills = () => {
                             <p>- Client Requirements Analysis</p>
                         </div>
                     </div>
-                </Container>
+                </div>
 
             </section>
         </>

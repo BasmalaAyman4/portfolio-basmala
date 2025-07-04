@@ -1,4 +1,4 @@
-.header {
+/* .header {
     position: sticky;
     top: 0;
     left: 0;
@@ -29,4 +29,91 @@
 .btn:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
+} */
+
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 0;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-family: "Amiamie", sans-serif !important;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: #eee;
+}
+
+/* Mobile Styles */
+@media (min-width:0px) and (max-width:600px) {
+    .nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav__open {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+        height: 100dvb;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .btn{
+        width: 100%;
+        text-align: left;
+    }
 }

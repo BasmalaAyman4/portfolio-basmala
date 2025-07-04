@@ -92,43 +92,6 @@ color: #333;
 
 }
 
-@media (min-width:0px) and (max-width:600px) {
-
-    .shape__mask,
-    .personal__shape h2,
-    .shape__dot {
-        display: none;
-    }
-
-    .link {
-        position: relative !important;
-        left: 0 !important;
-        top: -70px !important;
-
-    }
-
-    .links {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        column-gap: 20px;
-    }
-
-    .personal__desc {
-        padding: 100px 20px;
-    }
-
-    .personal__desc h2 {
-        width: 100%;
-        font-size: 40px;
-    }
-
-    .personal__sec {
-        height: fit-content;
-    }
-
-}
-
 
 .btn {
     height: 50px;
@@ -162,4 +125,85 @@ color: #333;
 .btn:hover::after {
     visibility: visible;
     transform: scale(100) translateX(2px);
+}
+
+/* Default styles already present... */
+
+/* Tablet: less than 1024px */
+@media (min-width: 600px) and (max-width:900px) {
+    .personal__sec{
+        padding: 100px 0 0 0;
+    }
+    .personal__body h2 {
+        font-size: 90px;
+    }
+
+    .personal__body .hr {
+        top: 85px;
+    }
+
+    .personal__body p {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 180px;
+        height: 45px;
+    }
+
+    .btntxt {
+        font-size: 12px;
+    }
+}
+
+/* Mobile: less than 768px */
+@media (min-width: 0px) and (max-width:600px){
+    .personal__sec {
+        padding: 150px 0 150px 0;
+        height: auto;
+    }
+
+    .personal__body h2 {
+        font-size: 50px;
+        text-align: left;
+    }
+
+    .personal__body .hr {
+        top: 45px;
+    }
+
+    .personal__body p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .links,
+    .social__btn {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 10px;
+    }
+
+    .links {
+        margin-top: 0px;
+    }
+
+    .link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn {
+        width: 160px;
+        height: 42px;
+    }
+.btn svg{
+    display: none;
+}
+    .btntxt {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
 }

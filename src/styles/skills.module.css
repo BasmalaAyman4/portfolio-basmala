@@ -1,5 +1,5 @@
 .skills__sec{
-
+ padding: 6rem 0;
  width: 51%;
     height: 100vh;
     display: flex;
@@ -7,6 +7,14 @@
     justify-content: center;
     color: #333;
     position: relative;
+        font-family: "Urbanist", sans-serif;
+
+}
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+
 }
 .skills__right{
     position: absolute;
@@ -122,13 +130,11 @@ margin: auto;
     z-index: 1;
 }
 
-/* تغيير لون النص عند الهوفر */
 .skill__card:hover .card__title,
 .skill__card:hover p {
     color: white !important;
 }
 
-/* تغيير لون الأيقونات عند الهوفر */
 .skill__card:hover .svg {
     fill: #333;
 }
@@ -144,16 +150,281 @@ margin: auto;
         
     }
     .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
         row-gap: 10px;
     }
-    .skills__sec{
-        height: 100%;
-    }
+   
     .sectionTitle{
         font-size: 1.8rem;
+    }
+   
+    .skill__card{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill__card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills__sec {
+    padding: 6rem 0;
+    width: 51%;
+    /* Desktop width */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    position: relative;
+    font-family: "Urbanist", sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.skills__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionTitle {
+    font-size: 2.8rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.sectionSubtitle {
+    font-size: 1rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    background-color: #333;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.svg {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.card__title {
+    margin: 30px 0 15px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.skill__card p {
+    padding-bottom: 10px;
+}
+
+.perf {
+    top: 20px;
+    left: 20px;
+}
+
+.skill__card {
+    background: #888c8c;
+    background: linear-gradient(90deg, rgba(136, 140, 140, 1) 0%, rgba(105, 105, 105, 1) 50%, rgba(43, 43, 43, 1) 100%);
+    font-family: "Amiamie", sans-serif !important;
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #ffff;
+}
+
+/* Background effect */
+.skill__card::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #37393a, #bdc3c7);
+    background: linear-gradient(to right, #37393a, #bdc3c7);
+    z-index: 0;
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Hover effects */
+.skill__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill__card:hover::before {
+    bottom: 0;
+}
+
+.skill__card:hover .card__shape img {
+    filter: brightness(0) invert(1);
+}
+
+.card__shape,
+.card__title,
+.skill__card p {
+    position: relative;
+    z-index: 1;
+}
+
+.skill__card:hover .card__title,
+.skill__card:hover p {
+    color: white !important;
+}
+
+.skill__card:hover .svg {
+    fill: #333;
+}
+
+.skill__card:hover .svg path {
+    fill: #333;
+}
+
+/* Tablet and Mobile Responsive */
+@media (min-width: 0px) and (max-width: 600px) {
+    .skills__sec {
+        width: 100% !important;
+        /* Full width on mobile */
+        height: auto;
+        /* Auto height */
+        padding: 3rem 0;
+        /* Reduced padding */
+    }
+
+    .skills__right {
+        display: none;
+    }
+
+    .sectionSubtitle {
+        width: 100%;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+        gap: 15px;
+        /* Add gap between cards */
+        justify-content: center;
+        padding: 0 10px;
+        /* Add some padding */
+    }
+
+    .skill__card {
+        width: 100%;
+        /* Full width cards */
+        height: auto;
+        /* Auto height */
+        min-height: 250px;
+        /* Minimum height */
+        max-width: 350px;
+        /* Maximum width */
+        margin: 0 auto;
+        /* Center the cards */
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .skill__card {
+        width: 100%;
+        padding: 15px;
+        min-height: 220px;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .cards {
+        padding: 0 5px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .skills__sec {
+        width: 100%;
+        padding: 4rem 0;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skill__card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .sectionSubtitle {
+        width: 90%;
     }
 }

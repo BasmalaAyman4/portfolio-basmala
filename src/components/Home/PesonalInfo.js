@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../styles/personalinfo.module.css'
 const PesonalInfo = () => {
     const handleDownload = () => {
-        // استبدلي هذا الرابط برابط ملفك الفعلي
+        
         const fileUrl = "https://drive.google.com/uc?export=download&id=1u44W_CYyhrJMM2eIcEz1zJ3V7xgpltAR";
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.download = 'Basmala-Ayman-CV.pdf'; // اسم الملف عند التحميل
+        link.download = 'Basmala-Ayman-CV.pdf'; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
