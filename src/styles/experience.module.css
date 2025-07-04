@@ -403,7 +403,7 @@ margin-top: 15px;
         right: 30px;
     }
     .ThirdSec{
-        margin: 10px;
+        padding: 10px;
     }
     .line__exp{
         display: grid;
@@ -425,3 +425,5 @@ margin-top: 15px;
     }
    
 }
+
+
