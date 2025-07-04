@@ -3,7 +3,7 @@ import styles from '../../styles/personalinfo.module.css'
 const PesonalInfo = () => {
     const handleDownload = () => {
         
-        const fileUrl = "https://drive.google.com/uc?export=download&id=1u44W_CYyhrJMM2eIcEz1zJ3V7xgpltAR";
+        const fileUrl = "https://drive.google.com/file/d/1e5ebfAiBT30u3Lrj7hybOwkAAeyqLYJ-/view?usp=sharing";
         const link = document.createElement('a');
         link.href = fileUrl;
         link.download = 'Basmala-Ayman-CV.pdf'; 

@@ -1,36 +1,39 @@
 .ThirdSec {
     position: relative;
     color: #ffff !important;
-    padding: 170px ;
+    padding: 170px;
     text-align: center;
     background-color: #333;
-   
-            width: 100%;
-           
-          
-            overflow: hidden ;
+
+    width: 100%;
+
+
+    overflow: hidden;
 }
 
 .skills__title {
     font-size: 2.8rem;
-        font-family: "Urbanist", sans-serif;
-        font-weight: 700;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
 
-        color: #fff;
-        margin-bottom: 1.5rem;}
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
 .sectionSubtitle {
     font-size: 1rem;
     font-family: "Urbanist", sans-serif;
     font-weight: 700;
     background-color: #fff;
- 
+
     text-align: center;
-    margin:auto ;
+    margin: auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     padding-bottom: 8px;
 }
+
 .row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,8 +44,8 @@
 .col {
 
     background: #d0d4d6;
-        background: linear-gradient(90deg, rgba(99, 99, 99, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgb(180, 184, 185) 100%);
-        border-radius: 16px;
+    background: linear-gradient(90deg, rgba(99, 99, 99, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgb(180, 184, 185) 100%);
+    border-radius: 16px;
     margin-top: 0;
     margin-bottom: 0;
     padding: 38px 30px 30px;
@@ -68,7 +71,7 @@
     width: 1px;
     height: 950px;
     position: absolute;
-margin-top: 15px;
+    margin-top: 15px;
     left: 50%;
 }
 
@@ -161,9 +164,11 @@ margin-top: 15px;
 .skill__four {
     margin-top: 78px;
 }
-.skill__five{
+
+.skill__five {
     margin-top: -50px;
 }
+
 .line__right {
     position: absolute;
     background-color: #fff;
@@ -176,6 +181,7 @@ margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .row h4 {
     color: #fff;
     font-size: 15px;
@@ -185,6 +191,7 @@ margin-top: 15px;
     -o-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
 }
+
 .row h3 {
     color: #fff;
     font-size: 22px;
@@ -204,13 +211,15 @@ margin-top: 15px;
     -o-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
 }
-.line__exp{
+
+.line__exp {
     display: flex;
     align-items: center;
     column-gap: 8px;
     margin: 15px 0;
 }
-.line__exp p{
+
+.line__exp p {
     border: 1px solid #8a8888;
     padding: 5px 15px;
     border-radius: 20px;
@@ -351,9 +360,11 @@ margin-top: 15px;
     .first__sec {
         padding: 0px;
     }
-.ThirdSec{
-    width: 100% !important;
-}
+
+    .ThirdSec {
+        width: 100% !important;
+    }
+
     .first__sec__row {
         display: flex;
         flex-direction: column;
@@ -409,35 +420,80 @@ margin-top: 15px;
     .git {
         right: 30px;
     }
-    .ThirdSec{
+
+    .ThirdSec {
         padding: 10px;
     }
-    .line__exp{
+
+    .line__exp {
         display: grid;
-        grid-template-columns: repeat(3,auto);
-       gap: 2px;
+        grid-template-columns: repeat(3, auto);
+        gap: 2px;
 
     }
-    .line__exp p{
+
+    .line__exp p {
         padding: 5px 5px !important;
         font-size: 10px;
         text-align: center;
     }
-    .skill__five{
-        margin: 0;
+
+    .skill__five {
+        margin: 10px 0 0 0;
     }
-    .skills__title{
+
+    .skills__title {
         font-size: 2rem;
     }
-    .sectionSubtitle{
+
+    .sectionSubtitle {
         font-size: 1rem;
     }
-        .row h3{
-            font-size: 15px;
-        }
-        .row p{
-            font-size: 14px;
-        }
+
+    .row h3 {
+        font-size: 15px;
+    }
+
+    .row p {
+        font-size: 14px;
+    }
 }
 
 
+@media (min-width:600px) and (max-width:900px) {
+    .ThirdSec {
+        width: 100% !important;
+        padding: 70px;
+    }
+
+    .lines__body,
+    .line__right,
+    .line__left {
+        display: none;
+    }
+
+    .row,
+    .cards__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill__two {
+        margin-top: 10px;
+    }
+
+    .skill__three {
+        margin-top: 12px;
+    }
+
+    .skill__four {
+        margin-top: 10px;
+    }
+
+    .skill__five {
+        margin: 10px 0 0 0;
+    }
+    .line__exp p{
+font-size: 10px;
+    }
+}

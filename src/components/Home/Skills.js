@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-/*     const cardRef = useRef(null);
+     const cardRef = useRef(null);
 
     useEffect(() => {
         gsap.fromTo(
@@ -21,11 +21,11 @@ const Skills = () => {
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: cardRef.current,
-                    start: 'top top', 
+                    start: 'top center', 
                 },
             }
         );
-    }, []); */
+    }, []); 
     return (
         <>
             <section className={`${styles.skills__sec}`} id="skills">
@@ -37,7 +37,7 @@ const Skills = () => {
                             honed through diverse projects and continuous learning in modern web development.
                         </p>
                     </div>
-                    <div className={`${styles.cards}`} >
+                    <div className={`${styles.cards}`} ref={cardRef}>
                         <div className={`${styles.skill__card}`}>
                             <div className={`${styles.card__shape}`}>
                                 <img alt='' src={shape} />

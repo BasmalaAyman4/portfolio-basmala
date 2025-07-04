@@ -130,7 +130,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .sectionHeader{
         margin-bottom: 25px;
     }
@@ -180,7 +180,6 @@
     
           .activeBackground {
               display: none !important;
-              /* إخفاء الخلفية المتحركة في الموبايل */
           }
     
           .serviceItem:active .serviceNumber,
@@ -211,7 +210,7 @@
         font-size: 1.1rem;
     }
 }
-
+ */
 
 
 

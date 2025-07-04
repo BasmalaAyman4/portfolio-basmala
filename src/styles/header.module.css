@@ -87,12 +87,15 @@
 
 /* Mobile Styles */
 @media (min-width:0px) and (max-width:600px) {
+   .header{
+    display: none;
+   }
     .nav {
         position: absolute;
         top: 100%;
         right: 0;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.95) !important;
         width: 100%;
         align-items: flex-start;
         padding: 1rem;
@@ -107,6 +110,7 @@
         opacity: 1;
         pointer-events: auto;
         height: 100dvb;
+        z-index: 1000000 !important;
     }
 
     .hamburger {

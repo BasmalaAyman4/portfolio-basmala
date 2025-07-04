@@ -1,7 +1,7 @@
 .project__sec{
 position: relative;
 padding: 50px 0;
-padding-bottom: 170px;
+padding-bottom: 30px;
 overflow: hidden ;
 }
 .projright{
@@ -209,6 +209,58 @@ color: #333;
 .exploreBtn:hover .iconPath {
     fill: #1f2937;
 }
+.btn__body{
+    text-align: center;
+}
+.button {
+    --color: #89888a;
+    font-family: inherit;
+    display: inline-block;
+    width:fit-content;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 50px 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.button:active:before {
+    background: #a3a3a3;
+    transition: background 0s;
+}
 @media (min-width:0px) and (max-width:600px) {
     .cards{
         display: grid;
@@ -222,5 +274,12 @@ color: #333;
         }
         .card{
             height: 440px !important;
+        }
+}
+
+@media (min-width:600px) and (max-width:900px) {
+    .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
 }
