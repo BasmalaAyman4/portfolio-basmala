@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import gg from '../assets/beneshty.png'
 import pm from '../assets/pm.png'
 import shein from '../assets/shein.png'
@@ -6,6 +6,12 @@ import etruk from '../assets/etruk.png'
 import styles from '../styles/projects.module.css'
 import cash from '../assets/cash.png'
 import dash from '../assets/dash.png'
+import shipdash from '../assets/DASH2.PNG'
+import stock from '../assets/stock.png'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
     const projects = [
@@ -57,16 +63,58 @@ const Projects = () => {
             category: "Dashboard",
             url: "https://drive.google.com/file/d/12cThw0IeWOwk1d79465zPAvFMKdgRFnu/view"
         },
+        {
+            id: 7,
+            title: "Shipments Dashboard",
+            description: "Built a logistics dashboard using React.js, TomTom Maps, and Chart.js. Developed features to create shipments, track package routes on interactive maps, and visualize revenue and distance data with charts",
+            image: shipdash,
+            category: "Dashboard",
+            url: "https://drive.google.com/file/d/1W6H_HTAAZADHQZQL5mZHsZWa2yPTXgP2/view?usp=sharing"
+        },
+        {
+            id: 8,
+            title: "Stock Dashboard",
+            description: " Built a stock management dashboard,track available stock, and identify out-of-stock items. Included options to assign products to people and print receipts without calculating salary, plus revenue charts to monitor sales",
+            image: stock,
+            category: "Dashboard",
+            url: "https://drive.google.com/file/d/1W6H_HTAAZADHQZQL5mZHsZWa2yPTXgP2/view?usp=sharing"
+        },
        
     ];
+    const cardRefs = useRef([]);
+
+    useEffect(() => {
+        cardRefs.current.forEach((card, index) => {
+            if (!card) return;
+
+            const isLeftToRight = [0, 1, 4, 5].includes(index);
+            const fromXPercent = isLeftToRight ? -50 : 50; // Translate relative to element width
+
+            gsap.fromTo(
+                card,
+                { xPercent: fromXPercent, opacity: 0 },
+                {
+                    xPercent: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 80%',
+                        toggleActions: 'play none none none',
+                    },
+                }
+            );
+        });
+    }, []);
   return (
     <>
           <section className={`${styles.project__sec}`} id="projects">
               <h2 className={styles.projects__title}>My Recent Works</h2>
               <div className={styles.cards}>
                   {
-                      projects.map(project => (
-                          <div className={styles.card}>
+                      projects.map((project , index) => (
+                          <div className={styles.card} ref={el => cardRefs.current[index] = el} key={project.id}>
                               <div className={styles.card__hero}>
                                   <img alt='' src={project.image} className={styles.gg} />
                               </div>
