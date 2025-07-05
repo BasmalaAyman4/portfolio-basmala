@@ -161,7 +161,7 @@ const Projects = () => {
                     }
                 </div>
                 <div className={styles.btn__body}>
-                <button className={`${styles.button}`}>View More Projects</button>
+                    <button className={`${styles.button}`} onClick={()=>window.open('https://github.com/BasmalaAyman4')}>View More Projects</button>
                 </div>
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 
 .container {
     margin: auto;
@@ -95,9 +95,7 @@
 .activeBackground {
     position: absolute;
     z-index: 1;
-    /* background: linear-gradient(260deg,
-                #8750f7 0%,
-                #2a1454 100%); */
+   
                 background: #d0d4d6;
                     background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);
     transition: all 0.5s ease;
@@ -112,7 +110,6 @@
 .activeBackground:not(.active) {
     opacity: 0;
 }
-/* Active/Hover states */
 .serviceItem:hover,
 .active {
     color: white;
@@ -129,102 +126,8 @@
     color: white !important;
 }
 
-/* Responsive styles */
-/* @media (max-width: 768px) {
-    .sectionHeader{
-        margin-bottom: 25px;
-    }
-    .sectionTitle {
-        font-size: 2rem;
-        margin-bottom: .5rem;
-    }
 
-    .serviceContent {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .serviceHeader,
-    .serviceDescription {
-        width: 100%;
-        padding: 0;
-    }
-
-    .serviceHeader {
-        padding-right: 25px;
-    }
-
-    .serviceTitle {
-        font-size: 1rem;
-    }
-
-   
-
-    .serviceItem .active {
-        background: #d0d4d6;
-            background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);        padding: 20px 15px;
-        color: white;
-    }
-
-    .serviceItem.active .serviceNumber,
-    .serviceItem.active .serviceTitle,
-    .serviceItem.active .serviceDescription {
-        color: white !important;
-    }
-          .serviceItem:active,
-          .serviceItem:focus,
-          .serviceItem.active {
-            background: #d0d4d6;
-                background: linear-gradient(90deg, rgba(208, 212, 214, 1) 0%, rgba(161, 161, 161, 0.94) 50%, rgba(99, 99, 99, 1) 100%);              color: white !important;
-          }
-    
-          .activeBackground {
-              display: none !important;
-          }
-    
-          .serviceItem:active .serviceNumber,
-          .serviceItem:active .serviceTitle,
-          .serviceItem:active .serviceDescription,
-          .serviceItem:focus .serviceNumber,
-          .serviceItem:focus .serviceTitle,
-          .serviceItem:focus .serviceDescription {
-              color: white !important;
-          }
-}
-
-@media (max-width: 480px) {
-    .servicesSection {
-        padding: 2rem 0;
-    }
-
-    .sectionTitle {
-        font-size: 1.5rem;
-    }
-    .serviceItem{
-        padding: 15px;
-    }
-    .serviceDescription p{
-        font-size: 12px;
-    }
-    .serviceNumber {
-        font-size: 1.1rem;
-    }
-}
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
