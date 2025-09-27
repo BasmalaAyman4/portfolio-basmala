@@ -10,7 +10,7 @@ import shipdash from '../assets/DASH2.PNG'
 import stock from '../assets/stock.png'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import adminpanel from '../assets/Untitled design.png'
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -57,6 +57,14 @@ const Projects = () => {
         },
         {
             id: 6,
+            title: "Genuis System Admin Panel",
+            description: "Built an E-commerce Dashboard with product/category management, order tracking, customer order creation, banners, and notifications.Implemented real-time chat with per-customer control and role-based permissions.",
+            image: adminpanel,
+            category: "Dashboard",
+            url: "https://drive.google.com/file/d/1pdlDLh7GEYH5Vl0_zoBFM1K11JzV9lBF/view?usp=sharing"
+        },
+        {
+            id: 7,
             title: "Trauxit Dashboard",
             description: "Developed, and maintained a Dashboard by building reusable components, and a responsive layout can share your posts with other people and chat with them create shipment deatils and view who will...",
             image: dash,
@@ -64,7 +72,7 @@ const Projects = () => {
             url: "https://drive.google.com/file/d/12cThw0IeWOwk1d79465zPAvFMKdgRFnu/view"
         },
         {
-            id: 7,
+            id: 8,
             title: "Shipments Dashboard",
             description: "Built a logistics dashboard using React.js, TomTom Maps, and Chart.js. Developed features to create shipments, track package routes on interactive maps, and visualize revenue and distance data with charts",
             image: shipdash,
@@ -72,7 +80,7 @@ const Projects = () => {
             url: "https://drive.google.com/file/d/1W6H_HTAAZADHQZQL5mZHsZWa2yPTXgP2/view?usp=sharing"
         },
         {
-            id: 8,
+            id: 9,
             title: "Stock Dashboard",
             description: " Built a stock management dashboard,track available stock, and identify out-of-stock items. Included options to assign products to people and print receipts without calculating salary, plus revenue charts to monitor sales",
             image: stock,
