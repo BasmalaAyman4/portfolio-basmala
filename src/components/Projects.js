@@ -52,10 +52,7 @@ const Projects = () => {
               <h3>{project.title}</h3>
               <p className={styles.card__para}>{project.description}</p>
               <button
-                onClick={e => {
-                  e.stopPropagation() // prevent card click
-                  window.open(project.url, '_blank', 'noopener,noreferrer')
-                }}
+                 onClick={() => navigate(`/projects/${project.id}`)}
                 className="button"
               >
                 <span className="button__icon-wrapper">
@@ -66,7 +63,7 @@ const Projects = () => {
                     <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />
                   </svg>
                 </span>
-                Visit Website
+                View Details
               </button>
             </div>
           </div>

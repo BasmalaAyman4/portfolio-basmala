@@ -294,3 +294,23 @@
 
   .playBtn svg { width: 52px; height: 52px; }
 }
+
+/* ── Google Drive iframe fix ── */
+/* Drive's /preview URL needs full dimensions and no pointer interference */
+.videoIframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: none;
+  display: block;
+  background: #000;
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background: #0a0a0a;
+  display: flex;
+  align-items: stretch;
+}
