@@ -1,285 +1,244 @@
-.project__sec{
-position: relative;
-padding: 50px 0;
-padding-bottom: 30px;
-overflow: hidden ;
+/* =========================================================
+   projects.module.css — full responsive, all breakpoints
+   ========================================================= */
+
+.project__sec {
+  position: relative;
+  padding: 70px 0 50px;
+  overflow: hidden;
 }
-.projright{
-    position: absolute;
-    top:0;
-    right: 0;
+
+.projects__title {
+  font-size: 2.8rem;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 60px;
 }
-.projleft {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+
+/* ── Card grid ── */
+.cards {
+  display: grid;
+  /* 4 cols on wide screens; auto-fit handles narrower */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin: 0 32px;
 }
-.projects__title{
-font-size: 2.8rem;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-align: center;
-color: #333;
-    margin-bottom: 60px;
-    }
-.cards{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 40px;
-    margin: 0 25px;
-}
+
+/* ── Individual card ── */
 .card {
-    width: min(430px, 100%);
-    border-radius: 18px !important;
-    color: #333;
-    height: 500px !important;
-    -webkit-border-radius: 18px !important;
-    -moz-border-radius: 18px !important;
-    -ms-border-radius: 18px !important;
-    -o-border-radius: 18px !important;
-    background: linear-gradient(145deg, #e8ebf0,
-        #f5f7fa);
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 18px;
+  color: #333;
+  background: linear-gradient(145deg, #e8ebf0, #f5f7fa);
+  box-shadow: rgba(17, 17, 26, 0.08) 0px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* No fixed height — let content breathe */
+  min-height: 440px;
 }
 
-.card__hero {
-    font-size: 0.875rem;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(17, 17, 26, 0.15) 0px 12px 32px;
+}
 
+/* ── Card image ── */
+.card__hero {
+  flex-shrink: 0;
+  overflow: hidden;
+  height: 200px;
 }
 
 .gg {
-    width: min(430px, 100%);
-    border-radius: 18px 18px 0 0;
-    -webkit-border-radius: 18px 18px 0 0;
-    -moz-border-radius: 18px 18px 0 0;
-    -ms-border-radius: 18px 18px 0 0;
-    -o-border-radius: 18px 18px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 18px 18px 0 0;
+  display: block;
+  transition: transform 0.35s ease;
 }
 
-.card__hero .card__job-title {
-    margin: 2rem 0;
-    font-size: 2rem;
-    font-weight: 600;
-    padding-right: 2rem;
+.card:hover .gg {
+  transform: scale(1.04);
 }
 
-.card__hero-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    font-weight: 700;
-}
-
+/* ── Card footer / body ── */
 .card__footer {
-   padding: 10px 20px;
-}
-.card__category{
-        background: linear-gradient(260deg, #2d2d2e 0%, #c1c1c4 100%);
-        color: #fff;
-        width: fit-content;
-        padding: 5px 15px;
-        font-size: 15px;
-        border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
-}
-.card__footer h3{
-    font-weight: 700;
-    margin: 8px 0;
-}
-.card__para{
-    font-weight: 500;
-}
-@media (min-width: 340px) {
-    .card__footer {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
+  padding: 0px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.card__job-summary {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.75rem;
+.card__category {
+  background: linear-gradient(260deg, #2d2d2e 0%, #c1c1c4 100%);
+  color: #fff;
+  width: fit-content;
+  padding: 4px 13px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+
+  font-family: "Urbanist", sans-serif;
 }
 
-.card__btn {
-    width: 100%;
-    font-weight: 400;
-    border: none;
-    display: block;
-    cursor: pointer;
-    text-align: center;
-    padding: 0.5rem 1.25rem;
-    border-radius: 1rem;
-    background: linear-gradient(260deg, #2d2d2e 0%, #c1c1c4 100%);
-        color: #fff;
-    font-size: 1rem;
+.card__footer h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 15px 0 6px;
+  color: #222;
+  font-family: "Urbanist", sans-serif;
 }
 
-@media (min-width: 340px) {
-    .card__btn {
-        width: max-content;
-    }
+.card__para {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 14px;
+  font-family: "Urbanist", sans-serif;
+  /* clamp to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.exploreBtn {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-    font-size: 1.125rem;
-    background-color: #f9fafb;
-    /* bg-gray-50 */
-    border: 2px solid #f9fafb;
-    border-radius: 9999px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    backdrop-filter: blur(12px);
-    isolation: isolate;
-    font-weight: 600;
+/* ── Visit button (inherits global .button) ── */
+
+/* ── "View More" button ── */
+.btn__body {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.exploreBtn::before {
-    content: "";
-    position: absolute;
-    left: -100%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: #10b981;
-    /* emerald-500 */
-    border-radius: 9999px;
-    transition: all 0.7s ease;
-    z-index: -10;
-}
-
-.exploreBtn:hover::before {
-    left: 0;
-    transform: translateY(-50%) scale(1.5);
-}
-
-.exploreBtn:hover {
-    color: #f9fafb;
-}
-
-.exploreIcon {
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
-    border: 1px solid #374151;
-    /* border-gray-700 */
-    border-radius: 9999px;
-    color: #333;
-    background-color: transparent;
-    transform: rotate(45deg);
-    transition: all 0.3s ease;
-}
-
-.exploreBtn:hover .exploreIcon {
-    transform: rotate(90deg);
-    background-color: #f9fafb;
-    border: none;
-}
-
-.iconPath {
-    fill: #1f2937 !important;
-    /* fill-gray-800 */
-    transition: fill 0.3s ease;
-}
-
-.exploreBtn:hover .iconPath {
-    fill: #1f2937;
-}
-.btn__body{
-    text-align: center;
-}
 .button {
-    --color: #89888a;
-    font-family: inherit;
-    display: inline-block;
-    width:fit-content;
-    height: 2.6em;
-    line-height: 2.5em;
-    margin: 50px 20px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    border: 2px solid var(--color);
-    transition: color 0.5s;
-    z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
-    font-weight: 500;
-    color: var(--color);
+  --color: #89888a;
+  font-family: "Urbanist", sans-serif;
+  display: inline-block;
+  width: fit-content;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 40px 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--color);
+  padding: 0 20px;
+  background: transparent;
 }
 
-.button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
 }
 
-.button:hover {
-    color: #fff;
+.button:hover { color: #fff; }
+
+.button:hover::before {
+  top: -30px;
+  left: -30px;
 }
 
-.button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.7s;
+.button:active::before {
+  background: #a3a3a3;
+  transition: background 0s;
 }
 
-.button:hover:before {
-    top: -30px;
-    left: -30px;
+/* =================================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================================= */
+
+/* ── Large desktops 1400px+ ── */
+@media (min-width: 1400px) {
+  .cards {
+    margin: 0 60px;
+    gap: 36px;
+  }
 }
 
-.button:active:before {
-    background: #a3a3a3;
-    transition: background 0s;
-}
-@media (min-width:0px) and (max-width:600px) {
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-    }
-        .projects__title{
-            font-size: 1.8rem;
-        }
-        .card__para{
-            font-size: 12px;
-        }
-        .card{
-            height: 440px !important;
-        }
+/* ── Medium desktop 1200px–1400px ── */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 40px;
+    gap: 24px;
+  }
 }
 
-@media (min-width:600px) and (max-width:900px) {
-    .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+/* ── Small desktop / laptop 1024px–1200px ── */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 32px;
+    gap: 24px;
+  }
+}
+
+/* ── Small laptop 900px–1024px ── */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 24px;
+    gap: 20px;
+  }
+
+  .projects__title { font-size: 2.2rem; }
+
+  .card__hero { height: 170px; }
+  .card { min-height: 400px; }
+}
+
+/* ── Tablet 600px–900px ── */
+@media (min-width: 600px) and (max-width: 900px) {
+  .projects__title { font-size: 1.9rem; }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20px;
+    gap: 18px;
+  }
+
+  .card { min-height: 380px; }
+  .card__hero { height: 160px; }
+}
+
+/* ── Mobile <600px ── */
+@media (max-width: 600px) {
+  .project__sec { padding: 50px 0 40px; }
+
+  .projects__title {
+    font-size: 1.7rem;
+    margin-bottom: 36px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 0 16px;
+    gap: 16px;
+  }
+
+  .card { min-height: 380px; }
+
+  .card__hero { height: 180px; }
+
+  .card__para { font-size: 12px; }
 }

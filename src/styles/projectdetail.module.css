@@ -1,179 +1,10 @@
 /* =========================================================
-   Project Detail Drawer — projectdetail.module.css
-   Slide-up overlay with media viewer + tabbed content
+   projectdetail.module.css
+   Shared styles: used by both ProjectDetail (drawer)
+   and ProjectDetailPage (full route page)
    ========================================================= */
 
-/* Overlay / Backdrop */
-.overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 100000;
-  background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  transition: background 0.35s ease, backdrop-filter 0.35s ease;
-  -webkit-transition: background 0.35s ease, backdrop-filter 0.35s ease;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.overlayVisible {
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-/* Main drawer */
-.drawer {
-  width: 100%;
-  max-width: 1200px;
-  max-height: 92vh;
-  background: #f8f7f3;
-  border-radius: 24px 24px 0 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-  -webkit-transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-}
-
-.drawerVisible {
-  transform: translateY(0);
-}
-
-/* ── Header ── */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 28px 16px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-  flex-shrink: 0;
-  background: #f8f7f3;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.headerMeta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.categoryBadge {
-  background: linear-gradient(260deg, #2d2d2e 0%, #929296 100%);
-  color: #fff;
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.title {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 700;
-  color: #333;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: "Urbanist", sans-serif;
-}
-
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.visitBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: linear-gradient(260deg, #2d2d2e 0%, #929296 100%);
-  color: #fff;
-  border: none;
-  border-radius: 10rem;
-  padding: 8px 18px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-  font-family: "Urbanist", sans-serif;
-}
-
-.visitBtn:hover {
-  opacity: 0.85;
-  color: #fff;
-}
-
-.closeBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid rgba(51, 51, 51, 0.25);
-  border-radius: 50%;
-  background: transparent;
-  color: #333;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.closeBtn:hover {
-  background: #333;
-  color: #fff;
-}
-
-/* ── Body (media + content) ── */
-.body {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 0;
-  overflow: hidden;
-  flex: 1;
-  min-height: 0;
-}
-
-/* ── Media Section ── */
-.mediaSection {
-  background: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.mediaStage {
-  position: relative;
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #111;
-}
-
-.mainImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.25s ease;
-}
-
-/* Video */
+/* ── Video elements ── */
 .videoWrapper {
   position: relative;
   width: 100%;
@@ -211,13 +42,13 @@
 }
 
 .playBtn:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.52);
 }
 
 .playBtn svg {
-  width: 64px;
-  height: 64px;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+  width: 68px;
+  height: 68px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
   transition: transform 0.2s;
 }
 
@@ -225,32 +56,13 @@
   transform: scale(1.08);
 }
 
-/* Media type badge */
-.mediaBadge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  font-family: "Urbanist", sans-serif;
-}
-
-/* Nav arrows */
+/* ── Nav arrows (shared) ── */
 .navBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -262,17 +74,18 @@
   transition: background 0.2s, transform 0.2s;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
 }
 
 .navBtn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-50%) scale(1.05);
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.06);
 }
 
-.navPrev { left: 12px; }
-.navNext { right: 12px; }
+.navPrev { left: 14px; }
+.navNext { right: 14px; }
 
-/* Thumbnail rail */
+/* ── Thumbnail rail ── */
 .thumbnailRail {
   display: flex;
   gap: 6px;
@@ -280,14 +93,11 @@
   background: #0d0d0d;
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #444 transparent;
+  scrollbar-color: #555 transparent;
   flex-shrink: 0;
 }
 
-.thumbnailRail::-webkit-scrollbar {
-  height: 3px;
-}
-
+.thumbnailRail::-webkit-scrollbar { height: 3px; }
 .thumbnailRail::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 2px;
@@ -295,8 +105,8 @@
 
 .thumbnail {
   flex-shrink: 0;
-  width: 64px;
-  height: 44px;
+  width: 68px;
+  height: 46px;
   border-radius: 6px;
   overflow: hidden;
   border: 2px solid transparent;
@@ -307,13 +117,9 @@
   position: relative;
 }
 
-.thumbnail:hover {
-  opacity: 0.85;
-}
+.thumbnail:hover { opacity: 0.82; }
 
-.thumbnailActive {
-  border-color: #fff;
-}
+.thumbnailActive { border-color: #fff; }
 
 .thumbImg {
   width: 100%;
@@ -322,71 +128,38 @@
   display: block;
 }
 
-.thumbVideo {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.thumbPlayIcon {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.mediaCounter {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  margin: 0;
-  padding: 6px 0 8px;
-  font-family: "Urbanist", sans-serif;
-  flex-shrink: 0;
-}
-
-/* ── Content Panel ── */
-.contentPanel {
-  background: #f8f7f3;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-left: 1px solid rgba(51, 51, 51, 0.1);
-}
-
-/* Tabs */
+/* ── Tabs ── */
 .tabs {
   display: flex;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   padding: 0 24px;
   flex-shrink: 0;
+  background: #f8f7f3;
 }
 
 .tab {
-  padding: 14px 16px;
+  padding: 14px 18px;
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
-  color: rgba(51, 51, 51, 0.5);
+  color: rgba(51, 51, 51, 0.45);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
   font-family: "Urbanist", sans-serif;
   margin-bottom: -1px;
+  letter-spacing: 0.02em;
 }
 
-.tab:hover {
-  color: #333;
-}
+.tab:hover { color: #333; }
 
 .tabActive {
   color: #333;
   border-bottom-color: #333;
 }
 
+/* ── Tab content ── */
 .tabContent {
   flex: 1;
   overflow-y: auto;
@@ -396,40 +169,44 @@
 }
 
 .tabContent::-webkit-scrollbar { width: 4px; }
-.tabContent::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+.tabContent::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
 
-/* Overview Tab */
+/* ── Overview ── */
 .description {
-  color: #252525;
-  line-height: 1.7;
-  font-size: 17px;
+  color: #444;
+  line-height: 1.75;
+  font-size: 14px;
   margin-bottom: 16px;
   font-family: "Urbanist", sans-serif;
 }
 
 .longDescription {
-  color: #000;
-  line-height: 1.7;
-  font-size: 17px;
-  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.75;
+  font-size: 13px;
+  margin-bottom: 24px;
   font-family: "Urbanist", sans-serif;
+  white-space: pre-line;
 }
 
 .metaRow {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 14px;
   padding: 10px 0;
-  border-top: 1px solid rgba(51, 51, 51, 0.08);
+  border-top: 1px solid rgba(51, 51, 51, 0.07);
 }
 
 .metaLabel {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #999;
-  min-width: 60px;
+  letter-spacing: 0.09em;
+  color: #aaa;
+  min-width: 56px;
   font-family: "Urbanist", sans-serif;
 }
 
@@ -440,17 +217,17 @@
   font-family: "Urbanist", sans-serif;
 }
 
-/* Tech Tab */
+/* ── Tech tab ── */
 .techGroup {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .techGroupLabel {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #999;
+  letter-spacing: 0.09em;
+  color: #aaa;
   margin-bottom: 10px;
   font-family: "Urbanist", sans-serif;
 }
@@ -471,7 +248,7 @@
   font-family: "Urbanist", sans-serif;
 }
 
-/* Highlights Tab */
+/* ── Highlights tab ── */
 .highlightsList {
   list-style: none;
   padding: 0;
@@ -487,7 +264,7 @@
   gap: 10px;
   color: #444;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
   font-family: "Urbanist", sans-serif;
 }
 
@@ -500,127 +277,20 @@
   flex-shrink: 0;
 }
 
-/* =================================================================
-   RESPONSIVE BREAKPOINTS
-   ================================================================= */
-
-/* Small laptop / medium tablets: 900–1280px */
-@media (min-width: 900px) and (max-width: 1280px) {
-  .body {
-    grid-template-columns: 1fr 320px;
-  }
-
-  .drawer {
-    max-height: 90vh;
-  }
-}
-
-/* Tablet: 600–900px — stack vertically */
-@media (min-width: 600px) and (max-width: 900px) {
-  .drawer {
-    border-radius: 20px 20px 0 0;
-    max-height: 95vh;
-  }
-
-  .body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    overflow-y: auto;
-  }
-
-  .mediaSection {
-    height: 320px;
-  }
-
-  .contentPanel {
-    border-left: none;
-    border-top: 1px solid rgba(51, 51, 51, 0.1);
-    overflow: visible;
-  }
-
-  .tabContent {
-    overflow: visible;
-  }
-
-  .header {
-    padding: 16px 20px 12px;
-  }
-
-  .title {
-    font-size: 1.15rem;
-  }
-}
-
-/* Mobile: <600px */
+/* ── Mobile tab tweaks ── */
 @media (max-width: 600px) {
-  .drawer {
-    border-radius: 16px 16px 0 0;
-    max-height: 96vh;
-  }
-
-  .header {
-    padding: 14px 16px 12px;
-    gap: 8px;
-  }
-
-  .headerMeta {
-    gap: 8px;
-    min-width: 0;
-  }
-
-  .categoryBadge {
-    font-size: 10px;
-    padding: 3px 10px;
-  }
-
-  .title {
-    font-size: 1rem;
-  }
-
-  .visitBtn {
-    padding: 7px 12px;
-    font-size: 12px;
-  }
-
-  .closeBtn {
-    width: 34px;
-    height: 34px;
-  }
-
-  .body {
-    grid-template-columns: 1fr;
-    overflow-y: auto;
-  }
-
-  .mediaSection {
-    height: 240px;
-  }
-
-  .contentPanel {
-    border-left: none;
-    border-top: 1px solid rgba(51, 51, 51, 0.1);
-  }
-
-  .navBtn {
-    width: 34px;
-    height: 34px;
-  }
-
-  .thumbnail {
-    width: 52px;
-    height: 36px;
-  }
-
-  .tabs {
-    padding: 0 16px;
-  }
+  .tabs { padding: 0 14px; }
 
   .tab {
     padding: 12px 10px;
     font-size: 12px;
   }
 
-  .tabContent {
-    padding: 18px 16px;
-  }
+  .tabContent { padding: 18px 16px; }
+
+  .navBtn { width: 34px; height: 34px; }
+
+  .thumbnail { width: 54px; height: 38px; }
+
+  .playBtn svg { width: 52px; height: 52px; }
 }

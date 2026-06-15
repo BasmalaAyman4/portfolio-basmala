@@ -1,20 +1,65 @@
+/* =========================================================
+   Project Detail PAGE — projectdetailpage.module.css
+   Full-page route version (not drawer) — /projects/:id
+   ========================================================= */
+
+/* ── Page wrapper ── */
 .page {
-  min-height: 100vh;
-  background: #f8f7f3;
+  min-height: 100dvh;
+  background: #E5E5E0;
+  display: flex;
+  flex-direction: column;
   font-family: "Urbanist", sans-serif;
 }
 
+/* ── Not found state ── */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  font-family: "Urbanist", sans-serif;
+  color: #333;
+}
+
+.notFound h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.notFound button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Urbanist", sans-serif;
+  transition: opacity 0.2s;
+}
+
+.notFound button:hover {
+  opacity: 0.8;
+}
+
+/* ── Page Header ── */
 .pageHeader {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-  background: #f8f7f3;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   gap: 16px;
+  padding: 14px 40px;
+  background: rgba(229, 229, 224, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 
 .backBtn {
@@ -22,31 +67,31 @@
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1.5px solid rgba(51, 51, 51, 0.25);
+  border: 1.5px solid rgba(51, 51, 51, 0.3);
   border-radius: 10rem;
   padding: 8px 18px;
   font-size: 13px;
   font-weight: 600;
   color: #333;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  font-family: "Urbanist", sans-serif;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   white-space: nowrap;
   flex-shrink: 0;
+  font-family: "Urbanist", sans-serif;
 }
 
 .backBtn:hover {
   background: #333;
   color: #fff;
+  border-color: #333;
 }
 
 .headerMeta {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 1;
   min-width: 0;
-  justify-content: center;
+  flex: 1;
 }
 
 .categoryBadge {
@@ -58,11 +103,10 @@
   font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
-  font-family: "Urbanist", sans-serif;
 }
 
 .title {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 700;
   color: #333;
   margin: 0;
@@ -80,7 +124,7 @@
   color: #fff;
   border: none;
   border-radius: 10rem;
-  padding: 8px 18px;
+  padding: 9px 20px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -96,19 +140,23 @@
   color: #fff;
 }
 
-/* Body layout */
+/* ── Body: two-column layout ── */
 .body {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  height: calc(100vh - 69px);
-  overflow: hidden;
+grid-template-columns: repeat(2,1fr);
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  /* Fill the rest of the viewport */
+  height: calc(100dvh - 61px);
 }
 
-/* Media */
+/* ── Media Section (left) ── */
 .mediaSection {
-  background: #1a1a1a;
+  background: #111;
   display: flex;
   flex-direction: column;
+  position: relative;
   overflow: hidden;
 }
 
@@ -120,7 +168,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111;
+  background: #0d0d0d;
 }
 
 .mainImage {
@@ -128,9 +176,10 @@
   height: 100%;
   object-fit: contain;
   display: block;
+  transition: opacity 0.25s ease;
 }
 
-/* Content panel */
+/* ── Content Panel (right) ── */
 .contentPanel {
   background: #f8f7f3;
   display: flex;
@@ -139,73 +188,121 @@
   border-left: 1px solid rgba(51, 51, 51, 0.1);
 }
 
-/* Not found */
-.notFound {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 20px;
-  font-family: "Urbanist", sans-serif;
+/* =================================================================
+   RESPONSIVE
+   ================================================================= */
+
+/* Large desktops 1400px+ */
+@media (min-width: 1400px) {
+  .body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pageHeader {
+    padding: 14px 60px;
+  }
 }
 
-.notFound button {
-  padding: 10px 24px;
-  border-radius: 10rem;
-  border: 1.5px solid #333;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: "Urbanist", sans-serif;
-  transition: background 0.2s, color 0.2s;
+/* Medium desktops / small laptops: 1024px–1400px */
+@media (min-width: 1024px) and (max-width: 1400px) {
+  .body {
+    grid-template-columns: 1fr 380px;
+  }
+
+  .pageHeader {
+    padding: 14px 32px;
+  }
 }
 
-.notFound button:hover {
-  background: #333;
-  color: #fff;
+/* Small laptops: 900px–1024px */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .body {
+    grid-template-columns: 1fr 340px;
+    height: auto;
+    min-height: calc(100dvh - 61px);
+  }
+
+  .pageHeader {
+    padding: 12px 24px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* Tablet: 600px–900px — stacks vertically */
+@media (min-width: 600px) and (max-width: 900px) {
+  .pageHeader {
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
   .body {
     grid-template-columns: 1fr;
-    grid-template-rows: 320px 1fr;
+    grid-template-rows: 400px auto;
     height: auto;
-    overflow: visible;
+    min-height: unset;
   }
 
   .mediaSection {
-    height: 320px;
+    height: 400px;
   }
 
   .contentPanel {
     border-left: none;
     border-top: 1px solid rgba(51, 51, 51, 0.1);
-    overflow: visible;
-    min-height: 60vh;
-  }
-
-  .pageHeader {
-    padding: 14px 20px;
+    min-height: 500px;
   }
 }
 
+/* Mobile: < 600px */
 @media (max-width: 600px) {
-  .body {
-    grid-template-rows: 240px 1fr;
-  }
-
-  .mediaSection {
-    height: 240px;
-  }
-
   .pageHeader {
-    padding: 12px 16px;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .backBtn {
+    padding: 7px 12px;
+    font-size: 12px;
+    /* hide text, keep icon */
+  }
+
+  .backBtn span {
+    display: none;
+  }
+
+  .categoryBadge {
+    display: none;
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .visitBtn {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: unset;
+  }
+
+  .mediaSection {
+    height: 260px;
+  }
+
+  .contentPanel {
+    border-left: none;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+    min-height: 500px;
   }
 }

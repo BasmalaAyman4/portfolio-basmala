@@ -9,28 +9,112 @@ import stock from '../assets/stock.png'
 import adminpanel from '../assets/Untitled design.png'
 import lasscar from '../assets/lasscar.png'
 export const projects = [
-  {
-    id: 1,
-    title: "BeNeshty",
-    description: "A modern, responsive online store for cotton clothing, built with Next.js.",
-    longDescription: "The platform includes product browsing, search and filtering, multilingual support, and a secure checkout process.",
-    image: gg,
-    category: "E-commerce",
-    url: "https://beneshty.com/",
-    role: "Frontend Developer",
-    year: "2024",
-    techStack: [
-      { label: "Frontend", items: ["Next.js", "TypeScript", "Tailwind CSS"] },
-      { label: "Features", items: ["i18n", "Search & Filter", "Checkout"] },
-    ],
-    highlights: [
-      "Multilingual support with next-i18next",
-      "Secure checkout process",
-      "Fully responsive across all screen sizes",
-      "Optimized for performance",
-    ],
-    media: [{ type: 'image', src: gg, alt: 'BeNeshty homepage' }],
-  },
+{
+  id: 1,
+  title: "BeNeshty",
+  description:
+    "A full-featured eCommerce platform for fashion and clothing products, providing customers with a seamless shopping experience and administrators with a powerful management dashboard.",
+
+  longDescription: `
+Developed a complete eCommerce ecosystem consisting of a customer-facing online store and a comprehensive administration dashboard.
+
+The platform enables customers to browse products, search and filter items, manage shopping carts, place orders, and complete secure checkout processes while supporting multiple languages and responsive experiences across all devices.
+
+The administration dashboard provides centralized management for products, categories, banners, colors, sizes, orders, users, content management, customer communication, and system settings.
+
+Key contributions:
+• Built a scalable and responsive eCommerce platform using Next.js and TypeScript.
+• Implemented multilingual support with full Arabic and English localization.
+• Developed advanced product search, filtering, and sorting functionalities.
+• Created dynamic product detail pages with SEO optimization.
+• Integrated secure authentication and user account management.
+• Implemented shopping cart, wishlist, and checkout workflows.
+• Developed order management and order tracking systems.
+• Built a comprehensive Admin Dashboard for managing products, categories, banners, colors, and sizes.
+• Implemented Role-Based Access Control (RBAC) for dashboard users.
+• Integrated real-time customer support chat using Firebase.
+• Developed content management modules for policies, terms, and website content.
+• Optimized application performance through server-side rendering, image optimization, and efficient data fetching.
+• Collaborated with backend developers and designers to deliver a high-quality production-ready platform.
+
+Main Modules:
+Online Store, Product Catalog, Search & Filtering, Shopping Cart, Checkout & Payments, Authentication, Order Management, Wishlist, Customer Accounts, Categories Management, Products Management, Banners Management, Colors & Sizes Management, Customer Support Chat, Content Management, User Roles & Permissions, Policies & Settings.
+`,
+
+  image: gg,
+  category: "E-Commerce",
+  url: "https://beneshty.com/",
+  role: "Frontend Developer",
+  year: "2024",
+
+  techStack: [
+    {
+      label: "Frontend",
+      items: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      label: "State Management",
+      items: [
+        "Redux Toolkit",
+        "Context API",
+      ],
+    },
+    {
+      label: "Internationalization",
+      items: [
+        "next-i18next",
+        "i18n",
+      ],
+    },
+    {
+      label: "Authentication",
+      items: [
+        "NextAuth",
+      ],
+    },
+    {
+      label: "Real-Time",
+      items: [
+        "Firebase",
+      ],
+    },
+    {
+      label: "E-Commerce Features",
+      items: [
+        "Search",
+        "Filtering",
+        "Wishlist",
+        "Cart",
+        "Checkout",
+        "Payment Integration",
+      ],
+    },
+  ],
+
+  highlights: [
+    "Complete E-Commerce Platform",
+    "Admin Dashboard Management",
+    "Role-Based Access Control (RBAC)",
+    "Real-Time Customer Chat",
+    "Advanced Search & Filtering",
+    "Multilingual Support (Arabic & English)",
+    "Responsive Mobile-First Design",
+    "SEO Optimized Pages",
+  ],
+
+  media: [
+    {
+      type: "image",
+      src: gg,
+      alt: "BeNeshty Store Homepage",
+    },
+  ],
+},
   {
   id: 2,
   title: "LassCar",
@@ -197,28 +281,94 @@ Dashboard & Analytics, Role & Permission Management, Admin Management, Company M
     ],
     media: [{ type: 'image', src: cash, alt: 'Trauxit Cash homepage' }],
   },
-  {
-    id: 6,
-    title: "Genuis System Admin Panel",
-    description: "Built an E-commerce Dashboard with product/category management, order tracking, and notifications.",
-    longDescription: "Implemented real-time chat with per-customer control and role-based permissions. Includes customer order creation and banner management.",
-    image: adminpanel,
-    category: "Dashboard",
-    url: "https://drive.google.com/file/d/1pdlDLh7GEYH5Vl0_zoBFM1K11JzV9lBF/view?usp=sharing",
-    role: "Frontend Developer",
-    year: "2024",
-    techStack: [
-      { label: "Frontend", items: ["React", "TypeScript", "Redux"] },
-      { label: "Features", items: ["Real-time Chat", "Role-based Access", "Order Management"] },
-    ],
-    highlights: [
-      "Real-time chat per customer",
-      "Role-based permission system",
-      "Product & category management",
-      "Banner and notification system",
-    ],
-    media: [{ type: 'image', src: adminpanel, alt: 'Genuis Admin Panel' }],
-  },
+{
+  id: 6,
+  title: "Genuis System Admin Panel",
+  description:
+    "A comprehensive eCommerce administration dashboard designed to manage products, categories, customer orders, banners, notifications, customer communication, and user permissions from a centralized interface.",
+
+  longDescription: `
+Developed a complete administration dashboard for managing eCommerce operations and customer interactions.
+
+The platform enables administrators to manage products, categories, orders, banners, notifications, customer accounts, and customer support conversations through a unified control panel.
+
+Key contributions:
+• Built a responsive and scalable Admin Dashboard using React and TypeScript.
+• Implemented Role-Based Access Control (RBAC) with customizable user permissions.
+• Developed product and category management modules with full CRUD functionality.
+• Built an order management system allowing administrators to create orders, update statuses, track order progress, and print order details.
+• Implemented real-time customer support chat with dedicated conversations for each customer.
+• Developed notification management and announcement systems.
+• Created banner management tools for homepage and promotional content.
+• Implemented customer management features and order history tracking.
+• Integrated state management using Redux for efficient application performance.
+• Collaborated with backend developers to integrate APIs and business workflows.
+
+Main Modules:
+Dashboard Analytics, Product Management, Category Management, Order Management, Order Status Tracking, Order Printing, Customer Management, Real-Time Customer Chat, Banner Management, Notifications Management, User Roles & Permissions, System Settings.
+`,
+
+  image: adminpanel,
+  category: "E-Commerce Administration",
+  url: "https://drive.google.com/file/d/1sq6ipTFRiPMdjfPXCOSwb2NBqttVc62k/view?usp=sharing",
+  role: "Frontend Developer",
+  year: "2024",
+
+  techStack: [
+    {
+      label: "Frontend",
+      items: [
+        "React",
+        "TypeScript",
+        "Redux",
+        "React Router",
+        "CSS Modules",
+      ],
+    },
+    {
+      label: "State Management",
+      items: [
+        "Redux Toolkit",
+      ],
+    },
+    {
+      label: "Real-Time",
+      items: [
+        "Firebase",
+        "WebSockets",
+      ],
+    },
+    {
+      label: "Administration Features",
+      items: [
+        "RBAC",
+        "Order Management",
+        "Order Printing",
+        "Notifications",
+        "Banner Management",
+      ],
+    },
+  ],
+
+  highlights: [
+    "Role-Based Access Control (RBAC)",
+    "Real-Time Customer Support Chat",
+    "Order Creation & Status Management",
+    "Order Printing System",
+    "Product & Category Management",
+    "Banner & Notification Management",
+    "Customer Management",
+    "Responsive Admin Dashboard",
+  ],
+
+  media: [
+    {
+      type: "image",
+      src: adminpanel,
+      alt: "Genuis System Admin Dashboard",
+    },
+  ],
+},
   {
     id: 7,
     title: "Trauxit Dashboard",
