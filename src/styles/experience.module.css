@@ -497,3 +497,99 @@
 font-size: 10px;
     }
 }
+
+/* experience.module.css - الجزء المتعلق بالـ timeline */
+
+.lines__body {
+    background-color: #eee;
+    width: 1px;
+    /* بدل 950px، خلّيها تمتد بالكامل */
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    position: relative;
+    /* إضافة padding عشان الكروت ما تلتصقش بالخط */
+    row-gap: 40px;
+}
+
+.col {
+    background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(161,161,161,0.94) 50%, rgb(180,184,185) 100%);
+    border-radius: 16px;
+    padding: 38px 30px 30px;
+    height: fit-content;
+    text-align: left !important;
+    /* إزالة margin-top من هنا وحطّها على كل كرت */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* ترتيب الكروت زمنياً + spacing منطقي */
+.skill__one  { margin-top: 0; }      /* RAR-IT: Apr 2026 - Present  → يمين */
+.skill__two  { margin-top: 60px; }   /* GS App: 2024 - Present      → شمال */
+.skill__three{ margin-top: 0; }      /* CareComm: Nov 2025           → شمال */
+.skill__four { margin-top: 60px; }   /* Trauxit: 2023-2024          → يمين */
+.skill__five { margin-top: 0; }      /* LXDYI: Mar-Nov 2024         → شمال */
+/* edu cards */
+.skill__six  { margin-top: 60px; }   /* Helwan Uni                  → يمين */
+.skill__seven{ margin-top: 0; }      /* Udacity                     → شمال */
+
+
+
+/* الخط الرأسي - يمتد بالكامل */
+.lines__body {
+    background-color: #eee;
+    width: 1px;
+    position: absolute;
+    top: 290px;       /* من تحت العنوان */
+    bottom: 80px;     /* يوقف قبل نهاية الـ section */
+    left: 47%;
+    transform: translateX(-50%);
+        height: calc(100% - 40px);
+}
+
+/* النقاط - كلها بنفس الـ class */
+.timelineDot {
+    background-color: #fff;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    position: absolute;
+    right: -9px;
+    z-index: 100000;
+    /* top يتحدد بالـ JS */
+}
+
+.timelineDotInner {
+    background-image: linear-gradient(281deg, #939394, #b6b5b8);
+    border-radius: 100%;
+    width: 11px;
+    height: 11px;
+}
+
+/* الـ row بـ row-gap بدل margins عشوائية */
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    row-gap: 40px;           /* مسافة ثابتة بين الصفوف */
+    align-items: start;      /* كل كارت يبدأ من أعلى الـ row */
+    position: relative;
+    margin-top: 40px;
+}
+
+/* امسح كل الـ skill__one etc. القديمة واستبدلها بـ left/right بس */
+.left  { margin-top: 0; }
+.right { margin-top: 80px; }  /* offset بسيط يخلي الـ timeline يبان */
+
+/* باقي الـ CSS زي ما هو */
