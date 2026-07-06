@@ -164,6 +164,7 @@ const ProjectDetailPage = () => {
             )}
           </div>
 
+
           {totalMedia > 1 && (
             <div className={styles.thumbnailRail}>
               {media.map((item, i) => (
