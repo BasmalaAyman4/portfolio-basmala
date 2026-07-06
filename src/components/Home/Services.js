@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState ,useCallback} from 'react';
 import styles from '../../styles/services.module.css';
 
 const Services = () => {
@@ -60,23 +60,26 @@ const Services = () => {
         }
     };
 
-    const updateActiveBackground = () => {
-        if (isMobile) return;
+  const updateActiveBackground = useCallback(() => {
+    if (isMobile) return;
 
-        const activeBg = activeBgRef.current;
-        if (!activeBg) return;
+    const activeBg = activeBgRef.current;
+    if (!activeBg) return;
 
-        const currentItem = document.querySelector(`.${styles.serviceItem}[data-index="${activeService}"]`);
-        if (currentItem) {
-            const { offsetTop, offsetHeight } = currentItem;
-            activeBg.style.top = `${offsetTop}px`;
-            activeBg.style.height = `${offsetHeight}px`;
-        }
-    };
+    const currentItem = document.querySelector(
+        `.${styles.serviceItem}[data-index="${activeService}"]`
+    );
 
-    useEffect(() => {
-        updateActiveBackground();
-    }, [activeService, isMobile]);
+    if (currentItem) {
+        const { offsetTop, offsetHeight } = currentItem;
+        activeBg.style.top = `${offsetTop}px`;
+        activeBg.style.height = `${offsetHeight}px`;
+    }
+}, [activeService, isMobile]);
+
+useEffect(() => {
+    updateActiveBackground();
+}, [updateActiveBackground]);
 
     return (
         <section className={styles.servicesSection} id="services">

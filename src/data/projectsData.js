@@ -1,5 +1,4 @@
 import gg from '../assets/beneshty.png'
-import pm from '../assets/pm.png'
 import shein from '../assets/shein.png'
 import etruk from '../assets/etruk.png'
 import cash from '../assets/cash.png'

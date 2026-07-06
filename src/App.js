@@ -25,9 +25,9 @@ function App() {
 
   const containerRef = useRef(null);
   const panelsRef = useRef(null);
-  const [isInPanelsSection, setIsInPanelsSection] = useState(false);
-  const [panelProgress, setPanelProgress] = useState(0);
-  const [currentPanel, setCurrentPanel] = useState(0);
+  const [, setIsInPanelsSection] = useState(false);
+  const [, setPanelProgress] = useState(0);
+  const [, setCurrentPanel] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {

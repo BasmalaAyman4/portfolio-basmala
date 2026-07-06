@@ -1,7 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import  { useEffect, useRef } from 'react'
 import styles from '../../styles/skills.module.css'
-import { Container } from 'react-bootstrap'
-import right from '../../assets/skillright.png'
 import shape from '../../assets/download.png'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
